@@ -8,6 +8,7 @@ it aims to provide a uniq interface for fast adopting developing production depl
 - Its build to last. So it saves Investments.
 - Works with any Software on Any Operating System.
 - is used on DIREKTSPEED OS - Server 
+- is used by Nils Infra the Infrastructure Manager using nils+stealify to supply imutable Infrastructures and Manage Complet Infrastructure and Application LifeCycles for Production and Development
 
 
 # Examples
