@@ -16,3 +16,5 @@ it aims to provide a uniq interface for fast adopting developing production depl
 - Stealify a DoneJS Application + backend
 - Stealify a React Application + backend
 - GUIDE - Master Stealify Combines multiple backends on multiple domains and many more.
+
+Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
