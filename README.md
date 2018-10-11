@@ -14,14 +14,35 @@ it aims to provide a uniq interface for fast adopting developing production depl
 - Its build to last. So it saves Investments.
 - Works with any Software on Any Operating System via Nativ bindings so you can Code Cross Plattform.
 - Stealify is like the Bible for Developers and Operators as also everyone that is Tech Interrested.
+- It has 4 Modular Core Components: Stealify Model(Reactive Model), Stealify Connect(Connects Reactive Models with any Database or API), Stealify Database(Engagement database), Stealify View(Creates Interactive Views for any Device and Browser)
+
 - is used on DIREKTSPEED OS - Server 
 - is used by Nils Infra the Infrastructure Manager using nils+stealify to supply imutable Infrastructures and Manage Complet Infrastructure and Application LifeCycles for Production and Development
 
 # Examples
-- GUIDE - Stealify a NodeJS Backend + a Seperate Frontend Application using SSR
-- Stealify a DoneJS Application + backend
-- Stealify a React Application + backend
-- GUIDE - Master Stealify Combines multiple backends on multiple domains and many more.
-- GUIDE - Use Stealify Model + Stealify Connect to do  event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2Mio+ integrations
+- GUIDE - Package a NodeJS App for distribution
+- GUIDE - Package a WebApp for distribution
+- GUIDE - Use Stealify Model + Stealify Connect 
+- GUIDE - Introduce the abilitys of Stealify Model + Stealify Connect + Stealify Database
+  - GUIDE - Use it to do  event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2Mio+ integrations
+  - GUIDE - Create a Basic extendable User Managment
+    - Add: SSO (Single Sign On) Server.
+    - Add: LDAP enabled Directory Service. (eDirecotry from Novel or Microsoft Active Directoy)
+  - GUIDE - Build a FileHosting Service
+    - How to Store and use files
+  - GUIDE - Build Frontend Applications (Games or Buissnes Software can be Anything)
+    - Create a basic App Using
+ - Introduce the Magic Power of our Solution Stack and how it will Change the way you look on Data it self
+  - A Single Place to Store (Local, Remote, Hybrid) All Your User Created Data and Auto Replicate and Manage the Backups. Infinity Scale Able with any Storage.
+  - Connect to anything
+  - Reactiv execute Code on Data Change and any other event.
+
+    
+ ## Guides
+ - How to Scale to infinity!
+ 
+  
+
+  
 
 Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
