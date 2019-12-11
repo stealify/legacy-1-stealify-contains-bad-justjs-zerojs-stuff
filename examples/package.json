@@ -1,0 +1,36 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "most/core examples",
+  "scripts": {
+    "lint": "standard --fix '{counter,add-inputs}/src/*.js'",
+    "build:counter": "npm run lint && rollup -c -i counter/src/index.js -o counter/dist/index.js",
+    "build:add-inputs": "npm run lint && rollup -c -i add-inputs/src/index.js -o add-inputs/dist/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@most/core": "^1.4.2",
+    "@most/dom-event": "^2.2.0",
+    "@most/scheduler": "^1.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint-plugin-flowtype": "^3.10.3",
+    "flow-bin": "^0.101.0",
+    "rollup": "^1.15.6",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-uglify": "^6.0.2",
+    "standard": "^12.0.1",
+    "uglify-es": "^3.3.9"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ]
+  }
+}

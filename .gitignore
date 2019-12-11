@@ -1,3 +1,9 @@
+# dist
+dist
+
+# submodules
+packages
+
 # Logs
 logs
 *.log
