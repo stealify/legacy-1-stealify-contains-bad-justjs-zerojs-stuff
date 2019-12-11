@@ -1,7 +1,7 @@
 // @flow
-import { combine, map, runEffects, startWith, tap } from '@most/core'
-import { newDefaultScheduler } from '@most/scheduler'
-import { input } from '@most/dom-event'
+import { combine, map, runEffects, startWith, tap } from 'stealify/core.mjs'
+import { newDefaultScheduler } from 'stealify/scheduler.mjs'
+import { input } from 'stealify/dom-event.mjs'
 import { qs } from '../../common'
 
 // Display the result of adding two inputs.
