@@ -1,12 +1,14 @@
 {
   "name": "stealify",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Steal Awesome Code for All kind of Components and Web Apps FRP",
-  "main": "es/core.mjs",
+  "main": "core.mjs",
+  "modele": "core.mjs",
+  "browser": "core.mjs",
   "type": "module",
   "scripts": {
     "build": "rollup -c && rsync -h -v -r -P -t package.json dist",
-    "npm:release:patch": "npm version patch",
+    "release": "npm version patch && rsync -h -v -r -P -t package.json dist && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
