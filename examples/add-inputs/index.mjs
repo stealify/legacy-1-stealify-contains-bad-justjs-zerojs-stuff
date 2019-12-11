@@ -1,8 +1,8 @@
 // @flow
-import { combine, map, runEffects, startWith, tap } from 'stealify/core.mjs'
-import { newDefaultScheduler } from 'stealify/scheduler.mjs'
-import { input } from 'stealify/dom-event.mjs'
-import { qs } from '../../common'
+import { combine, map, runEffects, startWith, tap } from '../node_modules/stealify/core.mjs'
+import { newDefaultScheduler } from '../node_modules/stealify/scheduler.mjs'
+import { input } from '../node_modules/stealify/dom-event.mjs'
+import { qs } from '../common.js'
 
 // Display the result of adding two inputs.
 // The result is reactive and updates whenever *either* input changes.

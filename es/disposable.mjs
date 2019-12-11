@@ -100,19 +100,22 @@ const throwIfErrors = (errors) => {
         throw new DisposeAllError(`${errors.length} errors`, errors);
     }
 };
-class DisposeAllError {
+class DisposeAllError extends Error {
     constructor(message, errors) {
+        super(message);
         this.name = 'DisposeAllError';
         this.message = message;
         this.errors = errors;
-        Error.call(this, message);
-        if (Error.captureStackTrace) {
-            Error.captureStackTrace(this, DisposeAllError);
-        }
+        //Error.call(this, message);
+        //if (this.captureStackTrace) {
+        //    this.captureStackTrace(this, DisposeAllError);
+        //}
         this.stack = `${this.stack}${formatErrorStacks(this.errors)}`;
     }
 }
-DisposeAllError.prototype = Object.create(Error.prototype);
+//DisposeAllError.prototype = Object.create(Error.prototype);
+/* Change to upstream not possible as its using typescript we made it a nativ extending class */
+
 const formatErrorStacks = (errors) => reduce(formatErrorStack, '', errors);
 const formatErrorStack = (s, e, i) => s + `\n[${(i + 1)}] ${e.stack}`;
 
