@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c && rsync -h -v -r -P -t package.json dist",
-    "npm:release:patch": "",
+    "npm:release:patch": "npm version patch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
