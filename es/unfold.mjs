@@ -1,4 +1,4 @@
-import { map, startWith, switchLatest } from '@most/core';
+import { map, startWith, switchLatest } from './core.mjs';
 
 // Create a stream that acts like the result of f(a) initially,
 // and when each event arrives in sa, map it with f and switch to it.

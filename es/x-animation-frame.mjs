@@ -1,6 +1,6 @@
-import { continueWith } from '@most/core';
-import { currentTime } from '@most/scheduler';
-import { disposeWith } from '@most/disposable';
+import { continueWith } from './core.mjs';
+import { currentTime } from './scheduler.mjs';
+import { disposeWith } from './disposable.mjs';
 
 const nextAnimationFrame = afp => new AnimationFrame(afp);
 

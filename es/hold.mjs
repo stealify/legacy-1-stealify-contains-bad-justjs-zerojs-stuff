@@ -1,5 +1,5 @@
-import { MulticastSource } from '@most/core';
-import { cancelTask, asap } from '@most/scheduler';
+import { MulticastSource } from './core.mjs';
+import { cancelTask, asap } from './scheduler.mjs';
 
 const hold = (stream) => new Hold(stream);
 class Hold extends MulticastSource {

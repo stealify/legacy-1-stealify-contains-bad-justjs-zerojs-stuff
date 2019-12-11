@@ -1,5 +1,5 @@
 /** @license MIT License (c) copyright 2016 original author or authors */
-import { curry2 } from '@most/prelude'
+import { curry2 } from './prelude.mjs'
 class ChunksOfSink {
   constructor (n, sink) {
     this.n = n
