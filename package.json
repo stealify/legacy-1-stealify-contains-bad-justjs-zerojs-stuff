@@ -1,6 +1,6 @@
 {
   "name": "stealify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Steal Awesome Code for All kind of Components and Web Apps FRP",
   "main": "core.mjs",
   "modele": "core.mjs",
