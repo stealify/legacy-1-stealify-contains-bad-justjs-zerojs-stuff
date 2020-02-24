@@ -1,9 +1,15 @@
 # Stealify
+
+
 Stealify is a Framework to adopt Frameworks and Software
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis.
 
 - Build your Frontend's using html and Stealify WebComponents
 - Build your Backends using Stealify-backend Modules like SSR for Stealify WebComponents so you can Render them Server Side or use the Stealify backend-api Framework. To Design Service Layers that are Consume Able by Any Software.
+
+# dictionary
+Stealify - To steal something in sense of doing really awesomely.
+
 
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
