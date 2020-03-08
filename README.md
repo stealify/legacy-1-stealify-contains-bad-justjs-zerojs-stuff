@@ -14,7 +14,7 @@ Stealify - To steal something in sense of doing really awesomely.
 # a Comic Description
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
 
-
+![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
 
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
