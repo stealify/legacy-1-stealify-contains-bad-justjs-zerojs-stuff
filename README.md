@@ -11,6 +11,11 @@ it aims to provide a uniq interface for fast adopting developing production depl
 Stealify - To steal something in sense of doing really awesomely.
 
 
+# a Comic Description
+![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
+
+
+
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
 - Generate Reactive Server and Client Side Applications and Manage/Monitore them from Dev to Production.
