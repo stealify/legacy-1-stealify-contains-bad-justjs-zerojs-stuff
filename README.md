@@ -28,12 +28,31 @@ Stealify - To steal something in sense of doing really awesomely.
 - Works with any Software on Any Operating System via Nativ code so you can Code Cross Plattform.
 - Stealify is like the Bible for Developers and Operators as also everyone that is Tech Interrested.
 
+# Get it?
+On Linux 
+```bash
+mkdir my-project
+cd my-project
+wget 
+``` 
+Via Docker
+
+
+## Anti Patterns
+- Inharitance is not for code ReUSE Functions are for reuse and Class Composition are for reuse. Mixins are not really for reuse 
+- Using require is a code smell for old code use import that is static analyzeable and brings instand improvements.
 
 # Examples
-- GUIDE - Package a NodeJS App for distribution
-- GUIDE - Package a WebApp for distribution
-- GUIDE - Use Stealify Model + Stealify Connect 
-- GUIDE - Introduce the abilitys of Stealify Model + Stealify Connect + Stealify Database
+- How to implament your own Coding Language into GraalVM
+- How to write a Java GraalJS Bridge
+- How to Manage Java Modules
+- How to manage node Modules
+- How to manage ECMAScript Modules
+- How to Package a NodeJS App
+- How to Package a WebApp
+- Interoperability Connection examples.
+- ***Not as Importent*** GUIDE - Use Stealify Model + Stealify Connect 
+- ***Not as Importent*** GUIDE - Introduce the abilitys of Stealify Model + Stealify Connect + Stealify Database
   - GUIDE - Use it to do  event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2Mio+ integrations
   - GUIDE - Create a Basic extendable User Managment
     - Add: SSO (Single Sign On) Server.
