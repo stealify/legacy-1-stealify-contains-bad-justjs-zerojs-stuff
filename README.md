@@ -37,6 +37,14 @@ wget
 ``` 
 Via Docker
 
+## Core Components
+- graalvm
+- vertx
+- stealify-ignite (https://ignite.apache.org/whatisignite.html)
+- atomx
+- stealify-zookeeper
+- stealify-grafana
+- stealify-k8s
 
 ## Anti Patterns
 - Inharitance is not for code ReUSE Functions are for reuse and Class Composition are for reuse. Mixins are not really for reuse 
