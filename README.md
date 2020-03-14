@@ -3,6 +3,16 @@
 Stealify is a Framework to adopt Frameworks and Software
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
 
+## Short Why?
+- Faster Development
+- Better Controle over the execution
+- Security
+- Reduced Operational Costs
+- Build to Last principles via modular software encapsulation!
+
+## Stealify the Software encapsulation Framework Concept
+Software Stacks today are composed out of many software products and connected via the network that is a hugh problem to maintain and run efficently stealify is about encapsulation so it creates Software Products that are build out of other Software Products and abstracts away the network overhead it enables to design or lets say Compose Software out of Many Products to define the behavior of your Software. Maximum code Reuse and Security paired with unparalled Productivity that was not possible before are only 3 of the endless features that you get on this way for free. It will change the way you code and design Software total.
+
 It allows you to Combine your Javascript code with a low level language like Java so you could let your Javascript code use
 The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary.
 
