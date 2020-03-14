@@ -1,7 +1,8 @@
 # Stealify
+provides a framework for creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express and run program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language.
 
-Stealify is a Framework to adopt Frameworks and Software
-it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
+
+Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
 
 ## Short Why?
 - Faster Development
@@ -37,7 +38,6 @@ in less time. Also near any Software today is a Distributed System that offers a
 ## Why Graal?
 Its a Binary Compileable Polyglot Runtime that 
 
-
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
 - Generate Reactive Server and Client Side Applications and Manage/Monitore them from Dev to Production.
@@ -47,10 +47,8 @@ Its a Binary Compileable Polyglot Runtime that
 ## What is It not for?
 - We are not aware of a single usecase that would not fit into this. You are free to submit issues.
 
-## What is it more exactly? 
-A Framework and Essential tooling for A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs. That Supports Node.js applications, including native packages. Offering Complet Application SDK's for Reallife Usecases that is Full compatibility with the latest ECMAScript specification as also Executes JavaScript code with best possible performance. It Allows simple upgrading from Nashorn or Rhino based applications via Fast interoperability with Java, Scala, or Kotlin, even with other GraalVM languages like PHP, Ruby, Python, or R. the whole implamentation and your software will also be Be embeddable in any systems like IoT, Databases for example Oracle RDBMS or MySQL. Any Mix is possible.
-
-
+## What is it more exactly?
+A Framework and Essential tooling for A high performance implementation of the JavaScript programming language. Built on the GraalVM Framework by Oracle Labs. That Supports Node.js applications, including native packages. Offering Complet Application SDK's for Reallife Usecases that is Full compatibility with the latest ECMAScript specification as also Executes JavaScript code with best possible performance. It Allows simple upgrading from Nashorn or Rhino based applications via Fast interoperability with Java, Scala, or Kotlin, even with other GraalVM languages like PHP, Ruby, Python, or R. the whole implamentation and your software will also be Be embeddable in any systems like IoT, Databases for example Oracle RDBMS or MySQL. Any Mix is possible.
 
 # How it Works?
 - Its minimalistic
