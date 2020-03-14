@@ -3,6 +3,8 @@
 Stealify is a Framework to adopt Frameworks and Software
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers. By Combining The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary
 
+The Documentation aims to be a Complet Software Development Guide for Coding Highperformance Applications and turn them into complet automated Autonomous Systems that take autark decissions for error handling and operations.
+
 # dictionary
 Stealify - To steal something in sense of doing really awesomely.
 
