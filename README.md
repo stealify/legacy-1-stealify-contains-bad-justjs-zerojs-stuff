@@ -1,5 +1,5 @@
 # Stealify
-provides a framework for creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express and run program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language.
+provides a framework for creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript Servers. 
 
 
 Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
