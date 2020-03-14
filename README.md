@@ -3,6 +3,13 @@
 Stealify is a Framework to adopt Frameworks and Software
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
 
+It allows you to Combine your Javascript code with a low level language like Java so you could let your Javascript code use
+The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary.
+
+Stealify aims to solve the biggest Problems of the NodeJS Runtime the creator of it rayen dahl did a talk 10 things i regret about NodeJS. like beeing tied to npm, like gype and c bindings hell, security. Read the full story and how all this is addressed.
+
+The Documentation aims to be a Complet Software Development Guide for Coding Highperformance Applications and turn them into complet automated Autonomous Systems that take autark decissions for error handling and operations.
+
 # dictionary
 Stealify - To steal something in sense of doing really awesomely.
 
@@ -11,6 +18,15 @@ Stealify - To steal something in sense of doing really awesomely.
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
 
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
+
+## Why ECMAScript / ES6+ / Javascript / Node is focused?
+Because it has proven that it is one of the best languages when it comes to massured coder productivity.
+It is a language that many people can learn and understand easy they are able to produce valueable running prototypes
+in less time. Also near any Software today is a Distributed System that offers a Webinterface or App so you will have at last one Javascript coder around in Any Project! And at all Stealify Concepts and the Main Installer are Polyglot so it is still useable It is a GraalVM based Framework while Parts or lets even say modules of it can be used even also directly with NodeJS or any Other Runtime like the browser.
+
+## Why Graal?
+Its a Binary Compileable Polyglot Runtime that 
+
 
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
