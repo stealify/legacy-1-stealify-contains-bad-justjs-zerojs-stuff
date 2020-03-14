@@ -1,7 +1,11 @@
 # Stealify
 
 Stealify is a Framework to adopt Frameworks and Software
-it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers. By Combining The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary
+it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis. It uses GraalJS as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
+It allows you to Combine your Javascript code with a low level language like Java so you could let your Javascript code use
+The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary.
+
+Stealify aims to solve the biggest Problems of the NodeJS Runtime the creator of it rayen dahl did a famouse talk 10 things i regret about NodeJS. like beeing tied to npm, like gype and c bindings hell, security. Read the full story and how all this is addressed.
 
 The Documentation aims to be a Complet Software Development Guide for Coding Highperformance Applications and turn them into complet automated Autonomous Systems that take autark decissions for error handling and operations.
 
