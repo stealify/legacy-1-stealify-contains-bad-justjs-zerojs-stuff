@@ -12,7 +12,7 @@ Stealify is a Framework to adopt Frameworks and Software it aims to provide meth
 - Build to Last principles via modular software encapsulation!
 
 ## Stealify the Software encapsulation Framework Concept
-Software Stacks today are composed out of many software products and connected via the network that is a hugh problem to maintain and run efficently stealify is about encapsulation so it creates Software Products that are build out of other Software Products and abstracts away the network overhead it enables to design or lets say Compose Software out of Many Products to define the behavior of your Software. Maximum code Reuse and Security paired with unparalled Productivity that was not possible before are only 3 of the endless features that you get on this way for free. It will change the way you code and design Software total.
+Software Stacks today are composed out of many software products and connected via the network that is a hugh problem to maintain and run efficently Stealify is about encapsulation so it creates Software Products that are build out of other Software Products and abstracts away the network overhead it enables to design or lets say Compose Software out of Many Products to define the behavior of your Software. Maximum code Reuse and Security paired with unparalled Productivity that was not possible before are only 3 of the endless features that you get on this way for free. It will change the way you code and design Software total.
 
 It allows you to Combine your Javascript code with a low level language like Java so you could let your Javascript code use
 The best parts and tools from the Java Ecosystem with the Power of a Scripting Language like Javascript fully flexible run able embbeded, standalone or even Compiled to a single optimized binary.
@@ -57,13 +57,13 @@ A Framework and Essential tooling for A high performance implementation of the J
 - Works with any Software on Any Operating System via Nativ code so you can Code Cross Plattform.
 - Stealify is like the Bible for Developers and Operators as also everyone that is Tech Interrested.
 
-## TODO
-- Make Realtime more easy
-- Finish PHP Integration
-- Many Many tutorials
-- Browser behavior and api's
-- Showing Application distribution Patterns
-  - Introduce direktspeed permissions concept of a shared OS binding platform for all apps. Its a solution for API's that chrome does not has finished yet.
+## The Core Stealify Components
+- graaljs - A ECMAScript 2012 compliant Javascript implementation built on GraalVM. With polyglot language interoperability support. That is 100% NodeJS Compatible.
+- graaljs-bindings-vertx - A async reactive Java Programming framework offering 
+- graaljs-bindings-atomx - A async reactive Java framework for building fault-tolerant distributed systems.
+- graaljs-bindings-apache-ignite - A in-memory computing platform used for transactional, analytical, and streaming workloads, delivering in-memory speed at petabyte scale.
+- graaljs-bindings-apache-zookeeper
+- graaljs-bindings-embedded-grafana
 
 # Get it?
 On Linux 
@@ -74,18 +74,19 @@ wget
 ``` 
 Via Docker
 
-## Core Components
-- graalvm
-- vertx
-- stealify-ignite (https://ignite.apache.org/whatisignite.html)
-- atomx
-- stealify-zookeeper
-- stealify-grafana
-- stealify-k8s
 
 ## Anti Patterns
 - Inharitance is not for code ReUSE Functions are for reuse and Class Composition are for reuse. Mixins are not really for reuse 
 - Using require is a code smell for old code use import that is static analyzeable and brings instand improvements.
+
+## TODO
+- Make Realtime more easy
+- Finish PHP Integration
+- Many Many tutorials
+- Browser behavior and api's
+- Showing Application distribution Patterns
+  - Introduce direktspeed permissions concept of a shared OS binding platform for all apps. Its a solution for API's that chrome does not has finished yet.
+
 
 # Examples
 - How to implament your own Coding Language into GraalVM
@@ -122,12 +123,6 @@ Via Docker
  ## Guides
  - How to Scale to infinity!
 
-## The Core Stealify Components
-graaljs - A ECMAScript 2012 compliant Javascript implementation built on GraalVM. With polyglot language interoperability support. That is 100% NodeJS Compatible.
-graaljs-bindings-vertx - A async reactive Java Programming framework offering 
-graaljs-bindings-atomx - A async reactive Java framework for building fault-tolerant distributed systems.
-graaljs-bindings-apache-ignite - A in-memory computing platform used for transactional, analytical, and streaming workloads, delivering in-memory speed at petabyte scale.
-graaljs-bindings-apache-ignite
-graaljs-bindings-apache-zookeeper
+
 
 Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
