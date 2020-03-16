@@ -70,6 +70,16 @@ wget
 ``` 
 Via Docker
 
+## Example usecases
+- Running Gitlab More Performant
+- Running K8S at high scale with less overhead
+- Realtime Chat Applications
+- Custom Databases with Javascript logic
+- Speed up existing Database deployments with additional logic
+- Drop In Replacement for many Open Source Software Implamentations that is more flexible
+- Creating Hosting or Serverless function Platforms
+- Create diffrent types of Applications like SaaS PaaS IaaS
+- embed your scaling, and failure handling logic into your application without extra services.
 
 ## Anti Patterns
 - Inharitance is not for code ReUSE Functions are for reuse and Class Composition are for reuse. Mixins are not really for reuse 
