@@ -122,4 +122,12 @@ Via Docker
  ## Guides
  - How to Scale to infinity!
 
+## The Core Stealify Components
+graaljs - A ECMAScript 2012 compliant Javascript implementation built on GraalVM. With polyglot language interoperability support. That is 100% NodeJS Compatible.
+graaljs-bindings-vertx - A async reactive Java Programming framework offering 
+graaljs-bindings-atomx - A async reactive Java framework for building fault-tolerant distributed systems.
+graaljs-bindings-apache-ignite - A in-memory computing platform used for transactional, analytical, and streaming workloads, delivering in-memory speed at petabyte scale.
+graaljs-bindings-apache-ignite
+graaljs-bindings-apache-zookeeper
+
 Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
