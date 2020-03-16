@@ -1,8 +1,5 @@
 # Stealify
-provides a framework for creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript Servers. 
-
-
-Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers.
+Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers it provides creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
 
 ## Short Why?
 - Faster Development
@@ -23,7 +20,6 @@ The Documentation aims to be a Complet Software Development Guide for Coding Hig
 
 # dictionary
 Stealify - To steal something in sense of doing really awesomely.
-
 
 # a Comic Description
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
@@ -86,43 +82,6 @@ Via Docker
 - Browser behavior and api's
 - Showing Application distribution Patterns
   - Introduce direktspeed permissions concept of a shared OS binding platform for all apps. Its a solution for API's that chrome does not has finished yet.
-
-
-# Examples
-- How to implament your own Coding Language into GraalVM
-- How to write a Java GraalJS Bridge
-- How to Manage Java Modules
-- How to manage node Modules
-- How to manage ECMAScript Modules
-- How to Package a NodeJS App
-- How to Package a WebApp
-- Interoperability Connection examples.
-- ***Not as Importent*** GUIDE - Use Stealify Model + Stealify Connect 
-- ***Not as Importent*** GUIDE - Introduce the abilitys of Stealify Model + Stealify Connect + Stealify Database
-  - GUIDE - Use it to do  event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2Mio+ integrations
-  - GUIDE - Create a Basic extendable User Managment
-    - Add: SSO (Single Sign On) Server.
-    - Add: LDAP enabled Directory Service. (eDirecotry from Novel or Microsoft Active Directoy)
-  - GUIDE - Build a FileHosting Service
-    - How to Store and use files
-  - GUIDE - Build Frontend Applications (Games or Buissnes Software can be Anything)
-    - Create a basic App Using
- - Introduce the Magic Power of our Solution Stack and how it will Change the way you look on Data it self
-  - A Single Place to Store (Local, Remote, Hybrid) All Your User Created Data and Auto Replicate and Manage the Backups. Infinity Scale Able with any Storage.
-  - Connect to anything
-  - Reactiv execute Code on Data Change and any other event.
-
-## confusing but true info
-- Build your Frontend's using html and Stealify WebComponents
-- Build your Backends using Stealify-backend Modules like SSR for Stealify WebComponents so you can Render them Server Side or use the Stealify backend-api Framework. To Design Service Layers that are Consume Able by Any Software.
-- It has 4 Modular Core Components: Stealify Model(Reactive Model), Stealify Connect(Connects Reactive Models with any Database or API), Stealify Database(Engagement database), Stealify View(Creates Interactive Views for any Device and Browser)
-
-- is used on DIREKTSPEED OS - Server 
-- is used by Nils Infra the Infrastructure Manager using nils+stealify to supply imutable Infrastructures and Manage Complet Infrastructure and Application LifeCycles for Production and Development
-
- ## Guides
- - How to Scale to infinity!
-
 
 
 Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
