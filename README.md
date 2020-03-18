@@ -1,7 +1,7 @@
-# dictionary
-Stealify - To steal something in sense of doing really awesomely.
+First lets lookup the term stealify in a dictionary: Stealify - To steal something in sense of doing really awesomely.
 
-Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. 
+It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
+it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
 
 Examples and tutorials are node-graalvm Focused a NodeJs Fork that uses GraalVM and not V8!
 
@@ -46,13 +46,6 @@ The best parts and tools from the Java Ecosystem with the Power of a Scripting L
 Stealify aims to solve the biggest Problems of the NodeJS Runtime the creator of it rayen dahl did a talk 10 things i regret about NodeJS. like beeing tied to npm, like gype and c bindings hell, security. Read the full story and how all this is addressed.
 
 The Documentation aims to be a Complet Software Development Guide for Coding Highperformance Applications and turn them into complet automated Autonomous Systems that take autark decissions for error handling and operations.
-
-
-
-
-
-## Why Graal?
-Its a Binary Compileable Polyglot Runtime that 
 
 ## What is It for?
 - event-driven automation for auto-remediation, security responses, troubleshooting, deployments, and more. Includes rules engine, workflow, 2M+ integrations
@@ -114,4 +107,4 @@ Via Docker
   - Introduce direktspeed permissions concept of a shared OS binding platform for all apps. Its a solution for API's that chrome does not has finished yet.
 
 
-Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu
+Stealify & NilsJS is created and maintained by Frank Lemanschik, which offers enterprise versions of them that includes advanced features for security, compliance, multitenancy, networking and storage, and is backed by 24x7, SLA-governed support. For more information about  Enterprise Solutions and Products, please visit https://dspeed.eu.
