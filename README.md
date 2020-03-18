@@ -1,5 +1,12 @@
 # Stealify
-Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers it provides creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
+
+Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. 
+
+It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers it provides creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
+
+## Patterns
+Based on Enterprise Integration Patterns (EIP) to help you solve your integration problem by applying best practices out of the box. Stealify supports the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from large scale distributed microservice architectures.
+
 
 ## Short Why?
 - Faster Development
