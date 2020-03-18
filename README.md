@@ -26,6 +26,8 @@ Stealify - To steal something in sense of doing really awesomely.
 
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
 
+![Your Language Sucks](http://www.commitstrip.com/wp-content/uploads/2015/12/Strip-Le-langage-de-la-discorde-V2-650-finalenglish.jpg)
+
 ## Why ECMAScript / ES6+ / Javascript / Node is focused?
 Because it has proven that it is one of the best languages when it comes to massured coder productivity.
 It is a language that many people can learn and understand easy they are able to produce valueable running prototypes
