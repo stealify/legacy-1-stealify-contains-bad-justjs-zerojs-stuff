@@ -1,12 +1,34 @@
-# Stealify
+# dictionary
+Stealify - To steal something in sense of doing really awesomely.
 
 Stealify is a Framework to adopt Frameworks and Software it aims to provide methods and tools for fast adopting developing production deploy and production serve your apps and servers or apis. 
 
+Examples and tutorials are node-graalvm Focused a NodeJs Fork that uses GraalVM and not V8!
+
+GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
+
 It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers it provides creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
+
+## Why ECMAScript / ES6+ / Javascript / Node is focused?
+Because it has proven that it is one of the best languages when it comes to massured coder productivity.
+It is a language that many people can learn and understand easy they are able to produce valueable running prototypes
+in less time. Also near any Software today is a Distributed System that offers a Webinterface or App so you will have at last one Javascript coder around in Any Project! And at all Stealify Concepts and the Main Installer are Polyglot so it is still useable It is a GraalVM based Framework while Parts or lets even say modules of it can be used even also directly with any Other Environment like the browser with a diffrent Runtime like v8 or Chakra, Spidermonkey.
+
+It is out of our view the most versatile highlevel language.
+
+
+# a Comic Description
+![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
+
+![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
+
+![Your Language Sucks](http://www.commitstrip.com/wp-content/uploads/2015/12/Strip-Le-langage-de-la-discorde-V2-650-finalenglish.jpg)
+
+
+
 
 ## Patterns
 Based on Enterprise Integration Patterns (EIP) to help you solve your integration problem by applying best practices out of the box. Stealify supports the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from large scale distributed microservice architectures.
-
 
 ## Short Why?
 - Faster Development
@@ -25,20 +47,9 @@ Stealify aims to solve the biggest Problems of the NodeJS Runtime the creator of
 
 The Documentation aims to be a Complet Software Development Guide for Coding Highperformance Applications and turn them into complet automated Autonomous Systems that take autark decissions for error handling and operations.
 
-# dictionary
-Stealify - To steal something in sense of doing really awesomely.
 
-# a Comic Description
-![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
 
-![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
 
-![Your Language Sucks](http://www.commitstrip.com/wp-content/uploads/2015/12/Strip-Le-langage-de-la-discorde-V2-650-finalenglish.jpg)
-
-## Why ECMAScript / ES6+ / Javascript / Node is focused?
-Because it has proven that it is one of the best languages when it comes to massured coder productivity.
-It is a language that many people can learn and understand easy they are able to produce valueable running prototypes
-in less time. Also near any Software today is a Distributed System that offers a Webinterface or App so you will have at last one Javascript coder around in Any Project! And at all Stealify Concepts and the Main Installer are Polyglot so it is still useable It is a GraalVM based Framework while Parts or lets even say modules of it can be used even also directly with NodeJS or any Other Runtime like the browser.
 
 ## Why Graal?
 Its a Binary Compileable Polyglot Runtime that 
