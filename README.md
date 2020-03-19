@@ -3,8 +3,15 @@ First lets lookup the term stealify in a dictionary: Stealify - To steal somethi
 It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
 it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
 
-Examples and tutorials are node-graalvm Focused a NodeJs Fork that uses GraalVM and not V8!
+Examples and tutorials are node-graalvm (a NodeJs Fork that uses GraalVM and not V8!), nodejs (a Javascript Runtime for the server) and Browsers (Chromium) Focused 
 
+
+## Core Integration Points for JS / ES / Javascript / ECMAScript
+
+### WASM + WASMi + WASMVM
+The Future is to run wasm + wasmi on the server and the client and use JS / ECMAScript as high-level language. That will allow Polyglot Programming at its best. Graal allows code reuse in a binary fashion as a middle step till we got everything in wasm.
+
+### GraalVM Runtime 
 GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
 
 It uses the Graal Framework as its fundamental building block to create high performant Applications, Tools, Utils and Servers it provides creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
@@ -16,16 +23,12 @@ in less time. Also near any Software today is a Distributed System that offers a
 
 It is out of our view the most versatile highlevel language.
 
-
 # a Comic Description
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2020/01/Strip-Framework-malgr%C3%A9-soi-650-finalenglish.jpg)
 
 ![DID IT](https://www.commitstrip.com/wp-content/uploads/2019/03/Strip-Seuls-dans-lunivers-650-finalenglish.jpg)
 
 ![Your Language Sucks](http://www.commitstrip.com/wp-content/uploads/2015/12/Strip-Le-langage-de-la-discorde-V2-650-finalenglish.jpg)
-
-
-
 
 ## Patterns
 Based on Enterprise Integration Patterns (EIP) to help you solve your integration problem by applying best practices out of the box. Stealify supports the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from large scale distributed microservice architectures.
