@@ -8,8 +8,12 @@ Examples and tutorials are node-graalvm (a NodeJs Fork that uses GraalVM and not
 
 ## Core Integration Points for JS / ES / Javascript / ECMAScript
 
-### WASM + WASMi + WASMVM
-The Future is to run wasm + wasmi on the server and the client and use JS / ECMAScript as high-level language. That will allow Polyglot Programming at its best. Graal allows code reuse in a binary fashion as a middle step till we got everything in wasm.
+### WASM + WASi + WASMVM(Runtime)
+The Future is to run wasm + wasi on the server and the client while use JS / ECMAScript as high-level language. That will allow Polyglot Programming at its best. we need everything in wasm and optimize the existing Runtimes.
+Rust and Go are good source starting languages to create wasm.
+- Rust is perfect implamented via wasmer.io it also is go compatible
+- Go is on it's way https://github.com/golang/go/issues/31105
+- NodeJS has wasm support and offers wasi
 
 ### GraalVM Runtime 
 GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
