@@ -10,10 +10,16 @@ Examples and tutorials are node-graalvm (a NodeJs Fork that uses GraalVM and not
 
 ### WASM + WASi + WASMVM(Runtime)
 The Future is to run wasm + wasi on the server and the client while use JS / ECMAScript as high-level language. That will allow Polyglot Programming at its best. we need everything in wasm and optimize the existing Runtimes.
+
+Wasi can be a new containerisation approach but running on mobiles, desktops, IOT and servers. It solves is able to solve a fundamental problem of trusting code from someone else with the host deciding what file / network IO the third party code has access to.
+Sort of like how android will prompt you when an app wants to access your contacts or file system.
+
 Rust and Go are good source starting languages to create wasm.
 - Rust is perfect implamented via wasmer.io it also is go compatible
 - Go is on it's way https://github.com/golang/go/issues/31105
 - NodeJS has wasm support and offers wasi
+
+
 
 ### GraalVM Runtime 
 GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
