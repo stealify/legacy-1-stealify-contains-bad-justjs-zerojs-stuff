@@ -49,7 +49,7 @@
     "flow": "0.2.3",
     "most-from-array": "1.0.3",
     "most-product": "2.0.0",
-    "rollup": "0.63.5",
+    "rollup": "2.3.0",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-commonjs": "9.3.4",
     "rollup-plugin-local-resolve": "1.0.7",
