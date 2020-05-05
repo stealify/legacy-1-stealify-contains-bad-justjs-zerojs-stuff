@@ -3,9 +3,6 @@ First lets lookup the term stealify in a dictionary: Stealify - To steal somethi
 It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
 it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
 
-Examples and tutorials are node-graalvm (a NodeJs Fork that uses GraalVM and not V8!), nodejs (a Javascript Runtime for the server) and Browsers (Chromium) Focused 
-
-
 ## Core Integration Points for JS / ES / Javascript / ECMAScript
 
 ### WASM + WASi + WASMVM(Runtime)
@@ -19,8 +16,6 @@ Rust and Go are good source starting languages to create wasm.
 - Go is on it's way https://github.com/golang/go/issues/31105
 - NodeJS has wasm support and offers wasi
   - parcel also covers rust well.
-
-
 
 ### GraalVM Runtime 
 GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
