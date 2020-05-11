@@ -55,7 +55,7 @@
     "rollup-plugin-local-resolve": "1.0.7",
     "rollup-plugin-node-resolve": "3.4.0",
     "rollup-plugin-typescript2": "0.25.3",
-    "standard": "11.0.1",
+    "standard": "14.3.4",
     "typescript": "3.7.3"
   }
 }
