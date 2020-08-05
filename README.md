@@ -3,6 +3,16 @@ First lets lookup the term stealify in a dictionary: Stealify - To steal somethi
 It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
 it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
 
+## Integrated Software
+- jscodeshift
+- codemod
+- lebab tranformed to get executed via jscodeshift as codemod.
+- rollup-enterprise
+
+
+
+
+
 ## Core Integration Points for JS / ES / Javascript / ECMAScript
 
 ### WASM + WASi + WASMVM(Runtime)
