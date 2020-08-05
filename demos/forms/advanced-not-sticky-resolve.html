@@ -1,0 +1,30 @@
+<not-sticky-odd-number></not-sticky-odd-number>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "not-sticky-odd-number",
+
+	view: `
+		<label>
+			Odd numbers only:
+			<input type="number" value:from="oddNumber" on:input:value:to="oddNumber">
+		</label>
+
+		<p>selected number: {{ oddNumber }}</p>
+	`,
+
+	ViewModel: {
+		oddNumber: {
+			value({ listenTo, lastSet, resolve }) {
+				listenTo(lastSet, (newVal) => {
+					if (newVal % 2) {
+						resolve(newVal);
+					}
+				});
+			}
+		}
+	}
+});
+</script>

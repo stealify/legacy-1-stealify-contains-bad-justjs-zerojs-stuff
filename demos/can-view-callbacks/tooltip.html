@@ -1,0 +1,38 @@
+<style>
+	[tooltip] {
+		background-color: rgb(153, 194, 255);
+		border: 1px solid #e1e1e8;
+	}
+	[tooltip]:hover {
+
+	}
+</style>
+<link rel="stylesheet" href="../../node_modules/jquery-ui/themes/base/all.css" />
+<div id="app"></div>
+<script type="text/stache" id="demo-html">
+<pre>
+canViewCallbacks.attr(<span tooltip="The attribute name to match.">"tooltip"</span>, function( <span tooltip="HTMLElement">el</span>, <span tooltip="attrData">attrData</span> ) {
+  $(el).<span tooltip="Calls jQueryUI's tooltip plugin.">"tooltip"</span>({
+    content: <span tooltip="Sets the tooltip's content">el.getAttribute("tooltip")</span>,
+    items: <span tooltip="jQueryUI's tooltip needs to be told what type of elements have a tooltip">"[tooltip]"</span>
+  })
+});
+</pre>
+</script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { stache, viewCallbacks } from "can";
+import $ from "jquery";
+import "jquery-ui/ui/widgets/tooltip";
+
+viewCallbacks.attr("tooltip", (el, attrData) => {
+	$(el).tooltip({
+		content: el.getAttribute("tooltip"),
+		items: "[tooltip]"
+	})
+});
+
+$("#app").html(
+	stache.from('demo-html')({})
+);
+</script>

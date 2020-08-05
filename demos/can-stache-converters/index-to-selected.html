@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>index-to-selected demo</title>
+</head>
+<body>
+<my-demo></my-demo>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { Component } from "can/everything";
+
+Component.extend({
+	tag: "my-demo",
+	view: `
+		<select value:bind="index-to-selected(this.person, this.people)">
+
+			{{# for(name of people) }}
+			  <option value:from="scope.index">{{ name }}</option>
+			{{/ for }}
+
+		</select>
+		<div>
+		  <h2>{{ person }}</h2>
+		</div>
+	`,
+	ViewModel: {
+		person: {default: "Anne"},
+		people: {
+			default: () => [
+				"Matthew", "Anne", "Wilbur"
+			]
+		}
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<two-way-name></two-way-name>
+
+<script type="text/stache" id="demo-html"></script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "two-way-name",
+
+	view: `
+		<label>
+			Name:
+			<input type="text" value:bind="name">
+		</label>
+
+		<p>Given name: {{ name }}</p>
+
+		<label>
+			Name:
+			<input type="text" value:bind="name">
+		</label>
+	`,
+
+	ViewModel: {
+		name: { default: "Eli" }
+	}
+});
+</script>

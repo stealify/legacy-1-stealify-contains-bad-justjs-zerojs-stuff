@@ -1,0 +1,105 @@
+<style>
+    /* use a class instead of disable the button so mouseover events are fired */
+	.disabled {
+		opacity: 0.5;
+	}
+</style>
+<my-demo></my-demo>
+<link rel="stylesheet" href="../../node_modules/jquery-ui/themes/base/all.css" />
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+
+import { Component, viewCallbacks, domMutate } from "can";
+
+
+viewCallbacks.attr("tooltip", function( el, attrData ) {
+	// A helper that updates or sets up the tooltip
+	var updateTooltip = function(){
+		$(el).tooltip({
+			content: el.getAttribute("tooltip"),
+			items: "[tooltip]"
+		})
+	}
+	// When the tooltip attribute changes, update the tooltip
+	domMutate.onNodeAttributeChange(el, function(mutation){
+		if(mutation.attributeName === "tooltip") {
+			// Setup the tooltip
+			updateTooltip();
+		}
+	});
+});
+
+Component.extend({
+	tag: "my-demo",
+	view: `<table>
+		<thead>
+			<td></td><td>Name</td><td>Email</td>
+		</thead>
+		<tbody>
+			{{# for(user of users) }}
+			<tr>
+				<td><input on:change="this.toggle(user)" type="checkbox"/></td>
+				<td>{{ user.name }}</td>
+				<td>{{ user.email }}</td>
+			</tr>
+			{{/ for }}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">
+					<button tooltip="{{ this.deleteTooltip() }}"
+							{{^ if(this.selected.length) }}class="disabled"{{/ if }}
+							on:click="this.notImplemented()">
+						Delete
+					</button>
+					<button
+						tooltip="{{ this.archiveTooltip() }}"
+						{{^ if(this.selected.length) }}class="disabled"{{/ if }}
+						on:click="this.notImplemented()">
+						Archive
+					</button>
+				</td>
+			</tr>
+		</tfoot>
+	</table>`,
+	ViewModel: {
+		users: {
+			default: () => [
+				{ name: "Justin Meyer", email: "justin@bitovi" },
+				{ name: "Brian Moschel", email: "brian@bitovi" },
+				{ name: "Bitovi", email: "contact@bitovi" },
+			]
+		},
+		selected: {default: () => []},
+		toggle: function(user){
+			var index = this.selected.indexOf( user );
+
+			if( index >= 0 ) {
+				this.selected.splice(index, 1)
+			} else {
+				this.selected.push(user)
+			}
+		},
+		deleteTooltip: function(){
+			var selectedCount = this.selected.length
+			if(selectedCount) {
+				return "Delete "+selectedCount+" users";
+			} else {
+				return "Select users to delete them.";
+			}
+		},
+		archiveTooltip: function(){
+			var selectedCount = this.selected.length;
+			if(selectedCount) {
+				return "Archive "+selectedCount+" users";
+			} else {
+				return "Select users to archive them.";
+			}
+		},
+		notImplemented: function(){
+			alert("we didn't make this work for this demo")
+		}
+	}
+});
+</script>

@@ -1,0 +1,89 @@
+<body>
+<mock-url></mock-url>
+<my-app></my-app>
+<script id="demo-source" main="@empty" src="../../node_modules/steal/steal.js" dev-bundle>
+import { Component, DefineMap, route, stacheRouteHelpers, value } from "can";
+import "can/demos/technology-overview/mock-url";
+
+Component.extend({
+	tag: "my-app",
+	view: `
+		{{# if(componentToShow.isResolved) }}
+			{{ componentToShow.value }}
+		{{/ if }}
+	`,
+	ViewModel: {
+		routeData: {
+			default() {
+				const observableRouteData = new DefineMap();
+				route.data = observableRouteData;
+				route.register("{page}", { page: "home" });
+				route.register("tasks/{taskId}", { page: "tasks" });
+				route.start();
+				return observableRouteData;
+			}
+		},
+		get componentToShow(){
+			if(!this.isLoggedIn) {
+				return steal.import("can/demos/technology-overview/page-login")
+					.then((module) => {
+						return new module.default({
+							viewModel: {
+								isLoggedIn: value.bind(this, "isLoggedIn")
+							}
+						});
+					});
+			}
+
+			return steal.import(`can/demos/technology-overview/page-${this.routeData.page}`)
+				.then((module) => {
+					switch(this.routeData.page) {
+						case "home":
+							return new module.default({
+								viewModel: {
+									logout: this.logout.bind(this)
+								}
+							});
+						case "tasks":
+							return new module.default({
+								viewModel: {
+									id: value.from(this.routeData, "taskId"),
+									logout: this.logout.bind(this)
+								}
+							});
+						default:
+							var page404 = document.createElement("h2");
+							page404.innerHTML = "Page Missing";
+							return page404;
+					}
+				});
+		},
+		isLoggedIn: { default: false, type: "boolean" },
+		logout() {
+			this.isLoggedIn = false;
+		}
+	}
+});
+</script>
+<style>
+.slider {
+    border: solid 1px blue;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    cursor: ew-resize;
+    position: relative;
+}
+percent-slider {
+    border: solid 1px black;
+    padding: 2px;
+    display: block;
+}
+p {
+    margin: 0px 0px 20px 0px;
+}
+</style>
+<style>
+body { margin: 0px; padding: 0px; }
+</style>
+</body>

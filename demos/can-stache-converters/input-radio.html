@@ -1,0 +1,38 @@
+<div id="demo">
+<div id='out'></div>
+<script type='text/stache' id="demo-html">
+<p>
+<input type="radio" name="number" checked:bind="one" /> One? {{ one }}<br>
+<input type="radio" name="number" checked:bind="two" /> Two? {{ two }}
+</p>
+<br>
+<p>Attending?
+  <input type="radio" checked:bind="equal(attending, 'yes')" /> Yes
+  <input type='radio' checked:bind="equal(attending, 'no')" /> No,
+  <input type='radio' checked:bind="equal(attending, 'maybe')" /> Maybe
+</p>
+<p>You {{ attendence() }}.</p>
+</script>
+</div>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { DefineMap, stache, stacheConverters } from "can";
+
+var person = new DefineMap({
+  attending: null,
+  one: false,
+  two: false
+});
+
+
+var template = stache.from("demo-html");
+var fragment = template(person, {
+	attendence: function(){
+		return person.attending ?
+			"are a " + person.attending :
+			"have not responded"
+
+	}
+});
+
+out.appendChild(fragment);
+</script>

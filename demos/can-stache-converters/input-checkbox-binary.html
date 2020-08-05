@@ -1,0 +1,19 @@
+<div id='out'></div>
+<script type="text/stache" id="demo-html">
+<label>
+	<input type='checkbox' checked:bind='either-or(pref, "Star Trek", "Star Wars")' />
+	Star Trek
+</label>
+<p>Your fandom: {{ pref }}</p>
+</script>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { DefineMap, stache, stacheConverters } from "can";
+
+var template = stache.from("demo-html");
+
+var fan = new DefineMap({
+	pref: "Star Trek"
+});
+
+out.appendChild(template(fan));
+</script>

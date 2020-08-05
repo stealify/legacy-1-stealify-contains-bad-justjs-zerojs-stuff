@@ -1,0 +1,64 @@
+<demo-html></demo-html>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id='demo-source'>
+import { Component, DefineList, DefineMap } from "can";
+
+const Score = DefineMap.extend("Score", {
+	points: "number",
+	player: "string"
+});
+
+Score.List = DefineList.extend("ScoreList", {
+	"#": Score,
+	sum: function(){
+		let sum = 0;
+		this.forEach(function(score){
+			sum += score.points;
+		});
+		return sum;
+	}
+});
+
+Component.extend({
+	tag: "player-scores",
+	view: `
+		{{# for(score of this.scores) }}
+			{{ score.points }}
+		{{/ for }}
+		= {{ this.scores.sum() }}
+	`,
+	ViewModel: {
+		scores: Score.List
+	}
+});
+
+const Game = DefineMap.extend({
+	scores: {
+		Type: Score.List
+	},
+	scoresForPlayer: function(name){
+		return this.scores.filter({player: name});
+	}
+});
+
+Component.extend({
+	tag: "demo-html",
+	view: `
+		<p>Alison: <player-scores scores:from="this.game.scoresForPlayer('Alison')"/></p>
+		<p>Jeff: <player-scores scores:from="this.game.scoresForPlayer('Jeff')"/></p>
+	`,
+	ViewModel: {
+		game: {
+			default: () => new Game({
+				scores: [
+					{player: "Alison", points: 2},
+					{player: "Alison", points: 3},
+					{player: "Jeff", points: 5},
+					{player: "Jeff", points: 1},
+					{player: "Alison", points: 6},
+					{player: "Jeff", points: 1},
+				]
+			})
+		}
+	}
+})
+</script>

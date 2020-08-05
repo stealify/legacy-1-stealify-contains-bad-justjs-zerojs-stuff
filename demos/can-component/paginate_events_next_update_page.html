@@ -1,0 +1,42 @@
+<body>
+<div id="out"></div>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { Component, stache, DefineMap } from "can";
+
+const demoHtml = `Page <span>1</span> <button class='next'>Next</button>`;
+
+const ViewModel = DefineMap.extend({
+	offset: {
+		default: 0
+	},
+	limit: {
+		default: 20
+	},
+	page: {
+		get: function(){
+			return Math.floor(this.offset / this.limit) + 1;
+		}
+	},
+	next: function(){
+		this.offset = this.offset + this.limit;
+	}
+});
+
+Component.extend({
+	tag: "my-paginate",
+	ViewModel: ViewModel,
+	view: stache(demoHtml),
+	events: {
+		".next click": function(){
+			this.viewModel.next();
+		},
+		"{viewModel} offset": function(){
+			this.element.querySelector("span").textContent = this.viewModel.page;
+		}
+	}
+})
+
+const template = stache("<my-paginate/>");
+document.getElementById("out").appendChild(template({}));
+</script>
+</body>

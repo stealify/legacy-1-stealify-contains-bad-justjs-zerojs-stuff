@@ -1,0 +1,61 @@
+<player-list id="out"/>
+<style>
+	.editing {
+		font-weight: bold;
+	}
+</style>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component, DefineMap} from "can";
+
+
+const Player = DefineMap.extend({
+	name: "string"
+});
+
+Component.extend({
+	tag: "player-edit",
+	view: `{{# if(this.player) }}
+		<input value:bind="this.player.name"/>
+		<button on:click="this.close()">X</button>
+	{{/ if }}`,
+	ViewModel: {
+		player: Player,
+		close: function(){
+			this.dispatch("close");
+		}
+	}
+});
+
+Component.extend({
+	tag: "player-list",
+	view: `<ul>
+		{{# for(player of this.players) }}
+			<li {{# this.isEditing(player) }}class="editing"{{/ }}
+				on:click='this.editPlayer(player)'>{{ player.name }}</li>
+		{{/ for }}
+	</ul>
+	<player-edit
+	  	on:close="this.removeEdit()"
+		player:from="this.editingPlayer"/>`,
+	ViewModel: {
+		editingPlayer: Player,
+		players: {
+			default: function() {
+				return [
+					new Player({name: "Justin"}),
+					new Player({name: "Brian"})
+				];
+			}
+		},
+		editPlayer: function(player){
+			this.editingPlayer = player;
+		},
+		removeEdit: function(){
+			this.editingPlayer = undefined;
+		},
+		isEditing: function(player){
+			return this.editingPlayer === player;
+		}
+	}
+});
+</script>

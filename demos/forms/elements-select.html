@@ -1,0 +1,35 @@
+<month-picker></month-picker>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "month-picker",
+
+	view: `
+		<label>
+			What month were you born?
+			<select value:bind="selectedMonth">
+				<option value="Jan">Jan</option>
+				<option value="Feb">Feb</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="Aug">Aug</option>
+				<option value="Sept">Sept</option>
+				<option value="Oct">Oct</option>
+				<option value="Nov">Nov</option>
+				<option value="Dec">Dec</option>
+			</select>
+		</label>
+
+		<p>Selected month: {{ selectedMonth }}</p>
+	`,
+
+	ViewModel: {
+		selectedMonth: { default: "June" }
+	}
+});
+</script>

@@ -1,0 +1,169 @@
+<style>
+  .selected {
+    font-weight: bold;
+    color: Gray;
+  }
+</style>
+<div id='out'></div>
+<script type='text/stache' id='demo-html'>
+<button on:click='back()'>Back</button>
+<button on:click='fwd()'>Forward</button>
+<div class='url'>URL: {{ appUrl }}</div>
+
+<h2>Locations</h2>
+{{# appState.locations }}
+	<label><input type='checkbox' checked:bind="selected" />{{ name }}</label>
+{{/ appState.locations }}
+
+<h2>Products</h2>
+{{# appState.products }}
+  <div><a href="#!product/{{ id }}" class='{{ selectedClass id }}'>{{ name }}</a></div>
+{{/ appState.products }}
+</script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import {DefineList, DefineMap, Observation, fixture,
+	realtimeRestModel, route, stache, stacheBindings } from "can";
+import $ from "jquery";
+
+fixture("GET /locations", function(){
+	return [
+		{id: 1, name: "Chicago"},
+		{id: 2, name: "New York"},
+		{id: 3, name: "LA"}
+	]
+});
+
+fixture("GET /products", function(){
+	return [
+		{id: 1, name: "Shampoo"},
+		{id: 2, name: "Conditioner"},
+		{id: 3, name: "Soap"}
+	]
+});
+
+const Location = DefineMap.extend({
+	id: "*",
+	name: "string",
+	selected: {
+		type: "boolean",
+		default: false
+	}
+});
+
+const LocationList = DefineList.extend({
+	"#": Location
+});
+
+realtimeRestModel({
+	Map: Location,
+	List: LocationList,
+	url: "/locations"
+});
+
+const Product = DefineMap.extend({
+	id: "*",
+	name: "string"
+});
+
+const ProductList = DefineList.extend({
+	"#": Product
+});
+
+realtimeRestModel({
+	Map: Product,
+	List: ProductList,
+	url: "/products"
+});
+
+const AppState = DefineMap.extend({
+	route: "string",
+	products: {
+		// don't serialize this property at all in the route
+		serialize: false,
+		Type: ProductList
+	},
+	productId: {
+		type: "number"
+	},
+	locations: {
+		// don't serialize this property at all in the route
+		serialize: false,
+		Type: LocationList
+	},
+	// virtual property that contains a comma separated list of ids based on locations that are selected
+	locationIds: {
+		// comma separated list of ids
+		serialize: function(){
+			let selected = this.locations.filter(function(location){
+				return location.selected;
+			});
+			if(!selected.length) return;
+			let ids = [];
+			selected.forEach(function(item){
+				ids.push(item.id);
+			});
+			return ids.join(",");
+		},
+		// toggle selected from a comma separated list of ids
+		set: function(val){
+			let arr = val || [];
+			if(typeof val === "string"){
+				arr = val.split(',')
+			}
+			for (let i = 0; i < arr.length; i++) {
+				arr[i] = +arr[i];
+			};
+			// for each id, toggle any matched location
+			this.locations.forEach(function(location){
+				if(arr.indexOf(location.id) !== -1){
+					location.selected = true;
+				} else {
+					location.selected = false;
+				}
+			})
+		}
+	}
+});
+
+// initialize and call map first, so anything binding to can.route will work correctly
+let appState = new AppState();
+route.data = appState;
+
+// when the data is ready, set the locations property
+appState.locations = new LocationList({});
+appState.products = new ProductList({});
+
+route.register("product/{productId}")
+
+// call ready after the appState is fully initialized
+route.start();
+
+route.addEventListener('change', function(){
+	console.log('something changed');
+});
+
+let appUrl = new Observation(function() {
+  // route.bindings is undocumented API; don’t use it in your app :)
+	route.bindings.hashchange.get();
+  return window.location.href;
+});
+
+let template = stache.from("demo-html");
+$("#out").html(template({
+    appState: appState,
+    appUrl: appUrl,
+    back: function(){
+      window.history.back();
+    },
+    fwd: function(){
+      window.history.forward();
+    }
+  }, {
+    selectedClass: function(id){
+      if(appState.productId === id()){
+        return 'selected';
+      }
+    }
+  }));
+</script>

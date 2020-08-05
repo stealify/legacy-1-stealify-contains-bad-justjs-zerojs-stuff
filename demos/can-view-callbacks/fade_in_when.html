@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="../../node_modules/jquery-ui/themes/base/all.css" />
+<div id="app"></div>
+<script type="text/stache" id="demo-html">
+<button toggle="showing">
+	{{# if(showing) }}Hide{{ else }}Show{{/ if }} more info
+</button>
+<div fade-in-when="showing">
+	Here is more info!
+</div>
+</script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { DefineList, DefineMap, domEvents, SimpleObservable,
+	stache, stacheBindings, viewCallbacks } from "can";
+import $ from "jquery";
+import "jquery-ui/ui/widgets/tooltip";
+
+viewCallbacks.attr("toggle", function(el, attrData) {
+	var attrValue = el.getAttribute("toggle");
+	var toggleCompute = attrData.scope.compute(attrValue);
+
+	$(el).click(function() {
+		toggleCompute( ! toggleCompute() );
+	});
+});
+
+viewCallbacks.attr("fade-in-when", function(el, attrData) {
+	var attrValue = el.getAttribute("fade-in-when");
+	var fadeInCompute = attrData.scope.compute(attrValue);
+
+	// handler for when the observable changes
+	var handler = function(event, newVal, oldVal) {
+		if (newVal && !oldVal) {
+			$(el).fadeIn("slow")
+		} else if (!newVal) {
+			$(el).hide()
+		}
+	};
+
+	fadeInCompute.on("change", handler);
+
+	handler(fadeInCompute());
+
+	domEvents.addEventListener(el, "removed", function() {
+		fadeInCompute.off("change", handler);
+	});
+});
+
+var template = stache.from('demo-html');
+
+$("#app").html( template({
+	showing: new SimpleObservable(false)
+}) );
+</script>

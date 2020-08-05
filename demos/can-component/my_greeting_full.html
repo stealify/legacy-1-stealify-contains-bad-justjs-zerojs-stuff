@@ -1,0 +1,24 @@
+
+<div id="out"></div>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { Component, stache, DefineMap } from "can";
+
+const demoHtml = `<header>
+  <my-greeting>
+    {{ site }}
+  </my-greeting>
+</header>`;
+
+Component.extend({
+	tag: "my-greeting",
+	view: stache("<h1><content/> - {{ title }}</h1>"),
+	ViewModel: DefineMap.extend({
+		title: {
+			default: "can-component"
+		}
+	})
+});
+
+const template = stache(demoHtml);
+document.querySelector('#out').appendChild(template({site: "CanJS"}));
+</script>

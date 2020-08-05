@@ -1,0 +1,66 @@
+<body>
+<style>
+	.selected {
+		background-color: yellow;
+	}
+	div {
+		cursor: pointer;
+	}
+</style>
+<div id="html">
+<div id="out"></div>
+</div>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { Component, DefineList, DefineMap, stache } from "can";
+
+const demoHtml = `{{# items }}
+  <div {{# isSelected() }}class='selected'{{/ isSelected }}
+       on:click='scope.vm.toggle(this)'>
+    {{ title }}
+  </div>
+{{/ items }}`;
+
+const SelectViewModel = DefineMap.extend("SelectViewModel", {
+	selected: {
+		Default: DefineList
+	},
+	toggle: function(item){
+		const selected = this.selected,
+			index = selected.indexOf(item);
+
+		if( index >= 0 ) {
+			selected.splice(index, 1);
+		} else {
+			selected.push(item);
+		}
+	}
+});
+
+Component.extend({
+	tag: "my-items",
+	ViewModel: SelectViewModel,
+	view: stache(demoHtml),
+	helpers: {
+		isSelected: function(options){
+			if( this.selected.indexOf(options.context) >= 0 ) {
+				return options.fn();
+			} else {
+				return options.inverse();
+			}
+		}
+	}
+});
+
+const fragment = stache("<my-items items:from='titleItems' />")({
+	titleItems: new DefineList([
+		{ title: "CanJS" },
+		{ title: "StealJS" },
+		{ title: "FuncUnit" },
+		{ title: "DocumentJS" },
+		{ title: "DoneJS" }
+	])
+});
+
+document.getElementById("out").appendChild(fragment);
+</script>
+</body>

@@ -1,0 +1,50 @@
+<div id="out"></div>
+
+<script id="demo-html" type="text/stache">
+<h1 id="full">{{ fullName }}</h1>
+<input id="first" type="text" value:bind="first">
+<input id="last" type="text" value:bind="last">
+
+<button id="btn-log">canDebug.logWhatChangesMe</button>
+</script>
+
+<style>
+	#btn-log {
+		color: white;
+		font-size: 100%;
+		padding: .5em 1em;
+		border-radius: 4px;
+		text-decoration: none;
+		background: rgb(66, 184, 221);
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+</style>
+
+<script id="demo-source" main="@empty" src="../../node_modules/steal/steal.js" dev-bundle>
+import { DefineMap, debug, stache, stacheBindings } from "can";
+
+const canDebug = debug();
+
+const Person = DefineMap.extend("Person", {
+	first: "string",
+	last: "string",
+	fullName: {
+		get: function() {
+			return this.first + " " + this.last;
+		}
+	}
+});
+
+const out = document.querySelector("#out");
+const template = stache.from("demo-html");
+const scope = new Person({first: "Jane", last: "Doe"});
+
+out.appendChild(template(scope));
+out.addEventListener("click", function(ev) {
+	const el = ev.target;
+	const parent = el.parentNode;
+	if (el.nodeName === "BUTTON") {
+		canDebug.logWhatChangesMe(out.querySelector("#full"));
+	}
+});
+</script>

@@ -1,0 +1,56 @@
+<style>
+	table {
+		border-collapse: collapse;
+	}
+
+	td, th {
+		border: 1px solid black;
+		padding: 10px;
+	}
+</style>
+
+<select-files></select-files>
+
+<script type="text/stache" id="demo-html"></script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component, DefineList } from "can";
+
+Component.extend({
+	tag: "select-files",
+
+	view: `
+		<input type="file" on:change="this.handleFiles(scope.element.files)" multiple>
+		<div>
+			Selected files:
+			{{# if(this.selectedFiles.length }}
+				<table>
+					<thead>
+						<th>File name</th>
+						<th>File size</th>
+						<th>File type</th>
+					</thead>
+					<tbody>
+						{{# for(file of this.selectedFiles) }}
+							<tr>
+								<td>{{ file.name }}</td>
+								<td>{{ file.size }}</td>
+								<td>{{ file.type }}</td>
+							</tr>
+						{{/ for }}
+					</tbody>
+				</table>
+			{{/ if }}
+		</div>
+	`,
+
+	ViewModel: {
+		selectedFiles: DefineList,
+
+		handleFiles(files) {
+			// use the Files API to work with the FileList
+			this.selectedFiles = files;
+		}
+	}
+});
+</script>

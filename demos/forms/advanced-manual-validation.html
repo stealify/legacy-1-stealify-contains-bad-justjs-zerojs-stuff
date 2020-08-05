@@ -1,0 +1,52 @@
+<style>
+input.error {
+	border: 4px solid red;
+}
+
+p.error {
+	color: red;
+}
+</style>
+
+<manually-validated-form></manually-validated-form>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "manually-validated-form",
+
+	view: `
+		<form>
+			{{# if(phoneNumberError) }}
+				<p class="error">{{ phoneNumberError }}</p>
+			{{/ if }}
+
+			<p>
+				Phone Number:
+				<input type="text" value:bind="userPhoneNumber" {{# if(phoneNumberError) }}class="error"{{/ if }}>
+			</p>
+
+			<input type="submit" disabled:from="phoneNumberIsInvalid">
+		</form>
+	`,
+
+	ViewModel: {
+		userPhoneNumber: "string",
+
+		get phoneNumber() {
+			return this.userPhoneNumber && this.userPhoneNumber.replace(/-/g, "");
+		},
+
+		get phoneNumberIsInvalid() {
+			return /[0-9]{3}[0-9]{3}[0-9]{4}/.test(this.phoneNumber) === false;
+		},
+
+		get phoneNumberError() {
+			if (this.phoneNumber && this.phoneNumberIsInvalid) {
+				return "Invalid phone number (ex: 123-456-7890).";
+			};
+		}
+	}
+});
+</script>

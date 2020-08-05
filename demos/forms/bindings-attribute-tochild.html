@@ -1,0 +1,30 @@
+<progress-bar></progress-bar>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "progress-bar",
+
+	view: `
+		<progress value:from="progressValue" max="100"></progress>
+	`,
+
+	ViewModel: {
+		progressValue: {
+			value(prop) {
+				var value = 0;
+
+				prop.resolve(value);
+
+				setInterval(function makeProgress() {
+					var newValue = value + Math.floor( Math.random() * 10 );
+					value = newValue > 100 ? 0 : newValue;
+
+					prop.resolve(value);
+				}, 500);
+			}
+		}
+	}
+});
+</script>

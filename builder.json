@@ -1,0 +1,179 @@
+{
+	"filename": "can.custom.js",
+	"banner": "/*!\n * <%= pkg.title || pkg.name %> - <%= pkg.version %>\n * <%= pkg.homepage %>\n * Copyright (c) <%= new Date().getFullYear() %> <%= pkg.author.name %>\n * <%= new Date().toUTCString() %>\n * Licensed <%= pkg.licenses[0].type %>\n<% if(typeof url !== \"undefined\") { %>\n * Includes: <%= ids %>\n * Download from: <%= url %>\n<% } %> */\n",
+	"modules": {
+		"can/component/component": {
+			"name": "can.Component",
+			"description": "Custom elements and widgets",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/construct/construct": {
+			"name": "can.Construct",
+			"description": "Inheritable constructor functions",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/map/map": {
+			"name": "can.Map",
+			"description": "Observables and key-value bindings",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/list/list": {
+			"name": "can.List",
+			"description": "Observables lists",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/list/promise/promise": {
+			"name": "can.List.promise",
+			"description": "Promises on lists",
+			"type": "plugin"
+		},
+		"can/compute/compute": {
+			"name": "can.compute",
+			"description": "can.compute lets you make observable values",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/model/model": {
+			"name": "can.Model",
+			"description": "Observes connected to a RESTful JSON interface",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/view/view": {
+			"name": "can.view",
+			"description": "Template loading, caching, rendering",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/view/stache/stache": {
+			"name": "can.stache",
+			"description": "High performance Mustache-like templates",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/control/control": {
+			"name": "can.Control",
+			"description": "Declarative event bindings",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/route/route": {
+			"name": "can.route",
+			"description": "Back button and bookmarking support",
+			"type": "core",
+			"isDefault": true
+		},
+		"can/route/pushstate/pushstate": {
+			"name": "can.route.pushstate",
+			"description": "can.route with pushstate",
+			"type": "plugin"
+		},
+		"can/map/define/define": {
+			"name": "can.Map.define",
+			"type": "plugin",
+			"description": "Define rich attribute behavior"
+		},
+		"can/list/sort/sort": {
+			"name": "can.List.Sort",
+			"type": "plugin",
+			"description": "Sort observable lists"
+		},
+		"can/util/fixture/fixture": {
+			"name": "can.fixture",
+			"type": "plugin",
+			"description": "Intercepts an AJAX request and simulates the response with a file or function"
+		},
+		"can/view/bindings/bindings": {
+			"name": "can.view.bindings",
+			"type": "core",
+			"isDefault": true,
+			"hidden": true
+		},
+		"can/view/live/live": {
+			"name": "can.view.live",
+			"type": "core",
+			"isDefault": true,
+			"hidden": true
+		},
+		"can/view/scope/scope": {
+			"name": "can.view.Scope",
+			"type": "core",
+			"isDefault": true,
+			"hidden": true
+		},
+		"can/util/tests/tests": {
+			"name": "can.util.tests",
+			"type": "plugin",
+			"hidden": true
+		},
+		"can/util/object/object": {
+			"name": "can.Object",
+			"type": "plugin",
+			"description": "Helper methods for object comparison"
+		},
+		"can/util/function/function": {
+			"name": "can.util.function",
+			"type": "plugin",
+			"hidden": true
+		},
+		"can/view/autorender/autorender": {
+			"name": "can.autorender",
+			"type": "plugin",
+			"description": "Automatically render templates found in the document"
+		},
+		"can/util/domless/domless": {
+			"name": "can.util.domless",
+			"type": "plugin",
+			"isDefault": false,
+			"hasTest": false
+		},
+		"can/view/stache/system": {
+			"name": "can.view.stache.system",
+			"type": "plugin",
+			"description": "Steal plugin for loading Stache templates",
+			"hasTest": false
+		},
+		"can/util/event": {
+			"name": "can.util.event",
+			"type": "core",
+			"hidden": true,
+			"hasTest": false
+		},
+		"can/util/vdom/build_fragment/build_fragment": {
+			"name": "can.util.vdom.buildFragment",
+			"type": "plugin",
+			"hidden": true
+		},
+		"can/util/vdom/document/document": {
+			"name": "can.util.vdom.document",
+			"type": "plugin",
+			"hidden": true
+		},
+		"can/view/import/import": {
+			"name": "can.view.import",
+			"type": "core",
+			"isDefault": true,
+			"hidden": true
+		}
+	},
+	"types": {
+		"core": "CanJS core",
+		"plugin": "Plugins"
+	},
+	"configurations": {
+		"jquery": {
+			"description": "jQuery",
+			"isDefault": true,
+			"library": "node_modules/jquery/dist/jquery.js",
+			"steal": {
+				"paths": {
+
+				}
+			}
+		}
+	}
+}

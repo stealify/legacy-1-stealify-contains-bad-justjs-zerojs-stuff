@@ -1,0 +1,24 @@
+<not-sticky-uppercase></not-sticky-uppercase>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "not-sticky-uppercase",
+
+	view: `
+		<label>
+			scopeProp:
+			<input type="text" value:from="scopeProp" on:change:value:to="scopeProp">
+		</label>
+
+		<p>scopeProp: {{ scopeProp }}</p>
+	`,
+
+	ViewModel: {
+		set scopeProp(val) {
+			return val.toUpperCase();
+		}
+	}
+});
+</script>

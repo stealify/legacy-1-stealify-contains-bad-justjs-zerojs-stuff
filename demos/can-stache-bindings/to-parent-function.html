@@ -1,0 +1,94 @@
+<style type="text/css">
+.active {font-weight: bold}
+</style>
+<my-demo></my-demo>
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty">
+import { Component, stache } from "can";
+
+Component.extend({
+	tag: "my-tabs",
+	view: `
+		<ul>
+			{{# for(panel of this.panels) }}
+				<li {{# if(this.isActive(panel) }}class='active'{{/ }}
+						on:click='this.makeActive(panel)'>
+					{{ panel.title }}
+				</li>
+			{{/ for }}
+		</ul>
+		<content></content>
+	`,
+	ViewModel: {
+		// Contains a list of all panel scopes within the
+		// tabs element.
+		panels: {
+			default: function() {
+				return [];
+			}
+		},
+		active: "any",
+		// When a `<panel>` element is inserted into the document,
+		// it calls this method to add the panel's viewModel to the
+		// panels array.
+		addPanel: function(panel){
+			// If this is the first panel, activate it.
+			if(this.panels.length === 0) {
+				this.makeActive(panel);
+			}
+			this.panels.push(panel);
+		},
+		// When a `<panel>` element is removed from the document,
+		// it calls this method to remove the panel's viewModel from
+		// the panels array.
+		removePanel: function(panel){
+			var panels = this.panels;
+			queues.batch.start();
+			panels.splice(panels.indexOf(panel),1);
+			// if the panel was active, make the first item active
+			if(panel === this.active){
+				if(panels.length){
+					this.makeActive(panels[0]);
+				} else {
+					this.active = undefined;
+				}
+			}
+			queues.batch.stop();
+		},
+		makeActive: function(panel){
+			this.active = panel;
+			this.panels.forEach(function(panel){
+				panel.active = false;
+			});
+			panel.active = true;
+		},
+		// this is viewModel, not mustache
+		// consider removing viewModel as arg
+		isActive: function( panel ) {
+			return this.active === panel;
+		}
+	}
+});
+
+Component.extend({
+	view: `{{# if(this.active) }}<content></content>{{/ if }}`,
+	tag:"my-panel",
+	ViewModel: {
+		active: { default: false },
+		addPanel: "any",
+		init: function(){
+			this.addPanel(this);
+		}
+	}
+});
+
+Component.extend({
+	tag: 'my-demo',
+	view: `
+		{{ let addPanel=null }}
+		<my-tabs addPanel:to="addPanel">
+			<my-panel addPanel:from="addPanel" title:from="'CanJS'">CanJS Content</my-panel>
+			<my-panel addPanel:from="addPanel" title:from="'StealJS'">StealJS Content</my-panel>
+		</my-tabs>
+	`
+})
+</script>

@@ -1,0 +1,28 @@
+<style>
+.focused {
+	border-bottom: 4px solid blue;
+}
+</style>
+
+<on-focus></on-focus>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "on-focus",
+
+	view: `
+		<label>
+			<span {{# if(scope.vars.focusedOnName }}class="focused"{{/ if }}>
+				Name:
+			</span>
+			<input type="text" value:bind="name" focused:to="scope.vars.focusedOnName">
+		</label>
+	`,
+
+	ViewModel: {
+		name: { default: "Jake" }
+	}
+});
+</script>

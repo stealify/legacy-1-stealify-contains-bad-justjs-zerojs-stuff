@@ -1,0 +1,23 @@
+<my-counter></my-counter>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { Component } from "can";
+
+Component.extend({
+	tag: "my-counter",
+
+	view: `
+		<p>{{ count }}</p>
+		<button on:click="plusOne()">Click Here</button>
+	`,
+
+	ViewModel: {
+		count: {
+			default: 0
+		},
+		plusOne() {
+			this.count += 1;
+		}
+	}
+});
+</script>

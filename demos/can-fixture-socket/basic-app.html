@@ -1,0 +1,57 @@
+<style type="text/css">
+	ul {
+		padding: 0;
+	}
+	li {
+		margin: 5px 0;
+		border: solid 1px lightgray;
+		padding: 3px 10px;
+	}
+	li span {
+		font-size: small;
+		color: gray;
+		display: block;
+	}
+</style>
+
+<div id="out"></div>
+<script id="demo-html" type="text/stache">
+<input type="text" value:bind="newMessage" />
+<button on:click="send()">Send</button>
+<ul>
+	{{# for(message of messages) }}
+		<li>{{ message.text }} <span>sent on {{ message.date }}</span></li>
+	{{/ for }}
+</ul>
+</script>
+
+<script src="../../node_modules/steal/steal.js" dev-bundle main="@empty" id="demo-source">
+import { DefineList, DefineMap, fixtureSocket, stache, stacheBindings } from "can";
+import io from "socket.io-client";
+
+// Mock socket.io server:
+var mockServer = new fixtureSocket.Server(io);
+mockServer.on("new message", function(message){
+	message.date = new Date();
+	mockServer.emit("message created", message);
+});
+
+// Client application:
+var socket = io("localhost");
+var viewModel = new DefineMap({
+	newMessage: "",
+	messages: new DefineList([]),
+	send: function(){
+		socket.emit("new message", {text: this.newMessage});
+		this.newMessage = "";
+	}
+});
+socket.on("message created", function(message){
+	viewModel.messages.unshift(message);
+});
+
+// Render application:
+var fragment = stache.from("demo-html")(viewModel);
+document.getElementById("out").appendChild(fragment);
+
+</script>

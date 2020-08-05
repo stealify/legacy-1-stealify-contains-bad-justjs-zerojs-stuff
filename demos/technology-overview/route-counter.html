@@ -1,0 +1,36 @@
+<body>
+<mock-url></mock-url>
+<script id="demo-source" main="@empty" src="../../node_modules/steal/steal.js" dev-bundle>
+import { DefineMap, route, stache, stacheBindings } from "can";
+import "can/demos/technology-overview/mock-url";
+
+const Counter = DefineMap.extend({
+    count: {
+        default: 0,
+        type: "number",
+        set(newValue){
+            return newValue || 0;
+        }
+    },
+    increment() {
+        this.count++;
+    }
+});
+
+window.myCounter = new Counter();
+route.data = myCounter;
+route.start();
+
+const view = stache(`
+  <button on:click='increment()'>+1</button>
+  Count: <span>{{ count }}</span>
+`);
+
+document.body.appendChild( view(myCounter) );
+</script>
+
+</body>
+
+<style>
+body { margin: 0px; padding: 0px; }
+</style>
