@@ -1,0 +1,47 @@
+{
+  "name": "@most/examples",
+  "private": true,
+  "version": "1.0.0",
+  "description": "examples",
+  "scripts": {
+    "build:add-inputs": "rollup -c -i add-inputs/index.js -o add-inputs/app.js",
+    "build:drag-n-drop": "rollup -c -i drag-n-drop/index.js -o drag-n-drop/app.js",
+    "build:mouse-position": "rollup -c -i mouse-position/index.js -o mouse-position/app.js",
+    "build:type-to-search": "rollup -c -i type-to-search/index.js -o type-to-search/app.js",
+    "lint": "standard **/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostjs/examples.git"
+  },
+  "author": "Your Name <you@wherever.com> (github.com/<you>)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostjs/examples/issues"
+  },
+  "homepage": "https://github.com/mostjs/examples#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-pipeline-operator": "^7.0.0-beta.3",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^4.0.0-beta.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "@most/core": "^1.3.0",
+    "@most/dom-event": "^2.0.0",
+    "@most/scheduler": "^1.2.0",
+    "@most/types": "^1.0.0",
+    "most-product": "^1.1.0",
+    "rest": "^2.0.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
