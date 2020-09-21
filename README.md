@@ -1,6 +1,6 @@
+# Stealify Incubator for @direktspeed/vmpack & vmdeploy
+Stealify is a Framework to adopt Software it is a Rockstar Unicorn Project all stable results will be supplyed and rebranded to @direktspeed/vmpack @direktspeed/vmdeploy and @open-pwa/open-pwa
 
-# Stealify
-Stealify is a Framework to adopt Software
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis.
 Stealify has a strong focus on Productivity it enables that via Automated Codemodification if needed to make existing Software compatible to a new App with a other api or other needs.
 
