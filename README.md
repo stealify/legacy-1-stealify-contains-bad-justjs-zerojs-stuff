@@ -13,6 +13,21 @@ it also aims to provide methods and tools for fast adopting developing productio
 
 ## Internals Roadmap
 
+- /stealify (lib with java tools) [A Uniq Java Interface for all Languages with a module system]
+- /ECMAScript/  (JS polyfills)
+- /PHP/  (PHP polyfills)
+- /RUBY/  (RUBY polyfills)
+- /PYTHON/  (PYTHON polyfills)
+- /quarkus (nativ build extension for stealify)
+- /vertx (async eventloop)
+- /pm
+- /cli
+- /build
+- /develop
+- /docs
+
+
+
 - [ ] GraalVM (Profiling Analyze Execute Security Low Level)
   - [ ] Quarkus (Profiling and Compile Tooling High Level Packaging to Nativ Binary and Incremental Builds)
   - [ ] ECMAScript / JavaScript Stealify (Collection of Modules and Parts Bindings)
