@@ -1,4 +1,4 @@
-# Stealify Incubator for @direktspeed/vmpack & vmdeploy
+# Stealify Incubator for @direktspeed/vmpack & vmdeploy & @open-pwa
 Stealify is a Framework to adopt Software it is a Rockstar Unicorn Project all stable results will be supplyed and rebranded to @direktspeed/vmpack @direktspeed/vmdeploy and @open-pwa/open-pwa
 
 it aims to provide a uniq interface for fast adopting developing production deploy and production serve your apps and servers or apis.
@@ -9,6 +9,26 @@ First lets lookup the term stealify in a dictionary: Stealify - To steal somethi
 It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
 it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
 
+<hr/>
+
+## Internals Roadmap
+
+- [ ] GraalVM (Profiling Analyze Execute Security Low Level)
+  - [ ] Quarkus (Profiling and Compile Tooling High Level Packaging to Nativ Binary and Incremental Builds)
+  - [ ] ECMAScript / JavaScript Stealify (Collection of Modules and Parts Bindings)
+    - [ ] Stealify
+    - [ ] jscodeshift
+    - [ ] codemod
+    - [ ] rollup
+    - [ ] webpack
+    - [ ] typescript
+  - [ ] NodeJS Compatible HighPerformance Context ECMAScript Runtime
+  - [ ] Eclipse Vertx Async Framework (JAVA)
+- [ ] - Stealify CLI tooling 
+
+## Stealify build on the Sholders of Giants
+Last Release Java EE 8 now Eclipse Foundation Jakarta EE MicroProfile Project for example
+
 ## Core Components
 ECMAScript based Components of Stealify 
 - Codemods (Collection of Code optimizations including runner)
@@ -16,31 +36,21 @@ ECMAScript based Components of Stealify
 - loader (rollup-enterprise + systemjs)
 - tooling (All kind of tools to analyze code and detect Problems)
 - patterns
-=======
-First lets lookup the term stealify in a dictionary: Stealify - To steal something in sense of doing really awesomely.
-
-It is a Framework to Create Software that is Environemnt, Platform and even Language Agnostic.
-it also aims to provide methods and tools for fast adopting developing production ready Applications that Run on Petrabyte Scale.
-
-## Stealify Integrated Software
 - jscodeshift
 - codemod
 - lebab tranformed to get executed via jscodeshift as codemod.
 - rollup-enterprise
 
-
-
-
-
 ## Core Integration Points for JS / ES / Javascript / ECMAScript
 
 ### WASM + WASi + WASMVM(Runtime)
+gu install wasm !!!
 The Future is to run wasm + wasi on the server and the client while use JS / ECMAScript as high-level language. That will allow Polyglot Programming at its best. we need everything in wasm and optimize the existing Runtimes.
 
 Wasi can be a new containerisation approach but running on mobiles, desktops, IOT and servers. It solves is able to solve a fundamental problem of trusting code from someone else with the host deciding what file / network IO the third party code has access to.
 Sort of like how android will prompt you when an app wants to access your contacts or file system.
 
-Rust and Go are good source starting languages to create wasm.
+Java Rust and Go are good source starting languages to create wasm.
 - Rust is perfect implamented via wasmer.io it also is go compatible
 - Go is on it's way https://github.com/golang/go/issues/31105
 - NodeJS has wasm support and offers wasi
