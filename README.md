@@ -11,6 +11,31 @@ it also aims to provide methods and tools for fast adopting developing productio
 
 <hr/>
 
+## Stack
+- GraalVM-ce-20.3 with JDK15 and JDK 8, 11 Compatibility also includes version manager
+- NodeJS 14 Latest with JDK15 and JDK 8, 11 Compatible bindings to GraalVM
+- NWJS Latest NodeJS and Chromium with JDK15 and JDK 8, 11 Compatible bindings to GraalVM
+  - Yes! Chromium with NodeJS bindings to GraalVM It is used for the Main @open-pwa/open-pwa/platform distribution also stealify/platform/desktop
+- Consistent JS API between NodeJS and GraalJS and node-graalvm JDK15 and JDK 8, 11 Compatible bindings to GraalVM and a GraalJS-node implementation
+- Perfect Javascript & Java Interop in any Scenario on any Device.
+- Automatic AI driven Deployment Optimization of your code at runtime via AI driven Deployment Processes
+- nodejs-mobile
+
+## Some examplesExtras
+- https://github.com/gluonhq/maps
+- gluon mobile with universal adapter https://bitbucket.org/gluon-oss/charm-down
+- cordova
+- couchbase & couchbase sync support 
+- apache ignite support.
+- vertx
+
+## TODO:
+Make distributions:
+- desktop
+- server
+- addon installer
+
+
 ## Internals Roadmap
 
 - /stealify (lib with java tools) [A Uniq Java Interface for all Languages with a module system]
