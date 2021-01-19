@@ -1,3 +1,10 @@
+# New direction
+https://developers.redhat.com/products/mta/overview found via https://dzone.com/articles/migrating-a-spring-boot-application-to-quarkus-cha turns out to be a Tool that helps people to improve java codebases so it is the same or lets say partial similar to the Stealify Compiler Project while it is not a Compiler it hooks into a other Location in the Development Process.
+
+We Should Prepare a Similar Concept for Polyglot Codebases with our knowleg about Software Encapsulation and Stack Composition. Maybe we can Combine Forces with redhat in that Section.
+
+
+
 # Stealify Incubator for @direktspeed/vmpack & vmdeploy & @open-pwa
 Stealify is a Framework to adopt Software it is a Rockstar Unicorn Project all stable results will be supplyed and rebranded to @direktspeed/vmpack @direktspeed/vmdeploy and @open-pwa/open-pwa as also the Commercial ***Stealify Cloud - the First Cloud agnostic Cloud aka deployless serverless platform***
 
