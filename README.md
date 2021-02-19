@@ -6,6 +6,29 @@
 - https://github.com/stealify/graalvm-nodejs-interop
 - https://github.com/stealify/graalvm-nodejs-context
 
+
+## About NodeJS
+NodeJS aka node is written in C and has Methods to Call C, .node(C using Node ABI), .wasm
+the node-graal version is a fork that is written in C that can additional also call into GraalVM as it uses the GraalVM ECMAScript engine as replacement for V8
+
+## About GraalVM
+graalvm (Stack) is a JVM based Polyglot Stack to translate polyglot code into Javabyte code and Run Compile Optimize it
+
+## About Rust
+Rust is one of the Most Solid Languages as it needs no Garbage Collector and has a safe Memory Management system by design. It can be used to Create Modules for GraalVM and or NodeJS. It is Also Able to Embedded both but that would add none needed overhead.
+
+Possible Solutions
+- node-rs (Rust bindings for Node ABI) => .node modules
+- LLVM (GraalVM)
+- wasm
+- shared object build .so
+- neonbindings => .node module
+- uvm......
+
+
+
+
+
 # Stealify Incubator for @direktspeed/vmpack & vmdeploy & @open-pwa
 Stealify is a Framework to adopt Software it is a Rockstar Unicorn Project all stable results will be supplyed and rebranded to @direktspeed/vmpack @direktspeed/vmdeploy and @open-pwa/open-pwa as also the Commercial ***Stealify Cloud - the First Cloud agnostic Cloud aka deployless serverless platform***
 
@@ -20,8 +43,8 @@ it also aims to provide methods and tools for fast adopting developing productio
 <hr/>
 
 ## Stack
-- GraalVM-ce-20.3 with JDK15 and JDK 8, 11 Compatibility also includes version manager
-- NodeJS 14 Latest with JDK15 and JDK 8, 11 Compatible bindings to GraalVM
+- GraalVM-ce-21.0 with JDK15 and JDK 8, 11 Compatibility also includes version manager
+- NodeJS 16 Latest with JDK15 and JDK 8, 11 Compatible bindings to GraalVM
 - NWJS Latest NodeJS and Chromium with JDK15 and JDK 8, 11 Compatible bindings to GraalVM
   - Yes! Chromium with NodeJS bindings to GraalVM It is used for the Main @open-pwa/open-pwa/platform distribution also stealify/platform/desktop
 - Consistent JS API between NodeJS and GraalJS and node-graalvm JDK15 and JDK 8, 11 Compatible bindings to GraalVM and a GraalJS-node implementation
