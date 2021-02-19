@@ -1,5 +1,5 @@
 # Most Current Stack
-- htps://github.com/stealify/rust-tooling
+- https://github.com/stealify/rust-tooling
 - https://github.com/stealify/graalvm-tooling
 - https://github.com/stealify/ecmascript-tooling
 - https://github.com/stealify/rust-interop
