@@ -1,7 +1,7 @@
 # Most Current Stack
 - https://github.com/stealify/rust-tooling
 - https://github.com/stealify/graalvm-tooling
-- https://github.com/stealify/ecmascript-tooling
+- https://github.com/stealify/ecmascript-tooling We should migrate the modules and stuff from this main repo to that tooling repo
 - https://github.com/stealify/rust-interop
 - https://github.com/stealify/graalvm-nodejs-interop
 - https://github.com/stealify/graalvm-nodejs-context
