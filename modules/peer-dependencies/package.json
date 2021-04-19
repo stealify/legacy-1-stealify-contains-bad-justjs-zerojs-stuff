@@ -62,7 +62,7 @@
     "estraverse": "^5.1.0",
     "f-matches": "^1.1.0",
     "flow": "^0.2.3",
-    "flow-parser": "^0.130.0",
+    "flow-parser": "0.149.0",
     "glob": "^7.1.6",
     "graceful-fs": "^4.2.4",
     "jest": "^26.2.2",
