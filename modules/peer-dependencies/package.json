@@ -44,7 +44,7 @@
     "@most/adapter": "^1.0.0",
     "@most/core": "^1.5.0",
     "@most/dom-event": "^2.2.0",
-    "@most/prelude": "^1.7.3",
+    "@most/prelude": "1.8.0",
     "@most/scheduler": "^1.2.3",
     "@most/types": "^1.0.2",
     "@rollup/plugin-alias": "^3.1.1",
