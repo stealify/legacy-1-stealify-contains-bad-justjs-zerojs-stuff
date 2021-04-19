@@ -68,7 +68,7 @@
     "jest": "^26.2.2",
     "jsdoc": "^3.6.5",
     "lodash": "^4.17.19",
-    "micromatch": "^4.0.2",
+    "micromatch": "4.0.4",
     "mkdirp": "^1.0.4",
     "most-from-array": "^1.0.3",
     "most-product": "^2.0.0",
