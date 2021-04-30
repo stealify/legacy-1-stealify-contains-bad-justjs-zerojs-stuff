@@ -1,3 +1,13 @@
+## Stealify lower the barrier of using v8::Isolates
+Cloudflare and other big companys are using them already but there exists no opensource Equivalent at present so stealify fills the gap. And Changes its mission from.
+
+Software Encapsulation to fast isolates that can operate with any software on a per Request base.
+
+
+
+
+# deprecated in favor of v8 isolates 
+
 # Most Current Stack
 - https://github.com/stealify/rust-tooling
 - https://github.com/stealify/graalvm-tooling
