@@ -22,9 +22,10 @@ find ./ -type f -exec sed -i s/JUST/STEALIFY/g {} +
 find ./ -type f -exec sed -i s/just/stealify/g {} +
 sed -i s/FromStealify/FromJust/g ./just.cc 
 sed -i s/AdstealifyAmount/AdjustAmount/g ./just.cc 
-mv ./just/just.cc ./just/stealify.cc
-mv ./just/just.h ./just/stealify.h
-mv ./just/just.js ./just/stealify.js
+mv ./just.cc ./stealify.cc
+mv ./just.h ./stealify.h
+mv ./just.js ./stealify.js
+mv ./examples/bundle/just.js ./examples/bundle/stealify.js 
 ```
 
 after that we need the dependencies from libv8
