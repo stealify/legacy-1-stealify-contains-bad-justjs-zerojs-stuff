@@ -1,0 +1,9 @@
+scratch
+*.bin
+*.wasm
+tmp
+*.ods
+*.png
+*.pem
+.stealify
+*.so

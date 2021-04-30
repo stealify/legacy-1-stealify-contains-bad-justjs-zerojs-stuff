@@ -1,0 +1,1 @@
+stealify download.js https://codeload.github.com/stealify/modules/tar.gz/0.0.6
