@@ -1,0 +1,8 @@
+deps/v8
+out
+.ninja_deps
+.ninja_log
+*.dSYM
+*.dylib
+*.shared
+test/fixtures/fs_write_output.txt

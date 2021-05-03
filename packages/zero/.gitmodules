@@ -1,0 +1,15 @@
+[submodule "test/web-platform-tests"]
+	path = test/web-platform-tests
+	url = https://github.com/web-platform-tests/wpt
+[submodule "deps/libuv"]
+	path = deps/libuv
+	url = https://github.com/libuv/libuv.git
+[submodule "deps/libffi"]
+	path = deps/libffi
+	url = https://github.com/libffi/libffi.git
+[submodule "tools/depot_tools"]
+	path = tools/depot_tools
+	url = https://chromium.googlesource.com/chromium/tools/depot_tools.git
+[submodule "tools/cpplint"]
+	path = tools/cpplint
+	url = https://github.com/cpplint/cpplint

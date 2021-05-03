@@ -15,14 +15,14 @@ STEALIFY_HOME=$(shell pwd)
 help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_\.-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-# modules: ## download the modules for this release
+modules: ## download the modules for this release
 #	rm -fr modules
 #	curl -L -o modules.tar.gz https://github.com/stealify/modules/archive/$(RELEASE).tar.gz
 #	tar -zxvf modules.tar.gz
 #	mv modules-$(RELEASE) modules
 #	rm -f modules.tar.gz
 
-#libs: ## download the libs for this release
+libs: ## download the libs for this release
 #	rm -fr libs-$(RELEASE)
 #	curl -L -o libs.tar.gz https://github.com/stealify/libs/archive/$(RELEASE).tar.gz
 #	tar -zxvf libs.tar.gz
@@ -30,31 +30,31 @@ help:
 #	rm -fr libs-$(RELEASE)
 #	rm -f libs.tar.gz
 
-#examples: ## download the examples for this release
+examples: ## download the examples for this release
 #	rm -fr examples
 #	curl -L -o examples.tar.gz https://github.com/stealify/examples/archive/$(RELEASE).tar.gz
 #	tar -zxvf examples.tar.gz
 #	mv examples-$(RELEASE) examples
 #	rm -f examples.tar.gz
 
-#v8headers: ## download v8 headers
+v8headers: ## download v8 headers
 #	curl -L -o v8headers-$(RELEASE).tar.gz https://raw.githubusercontent.com/stealify/v8headers/$(RELEASE)/v8.tar.gz
 #	tar -zxvf v8headers-$(RELEASE).tar.gz
 #	rm -f v8headers-$(RELEASE).tar.gz
 
-#deps/v8/libv8_monolith.a: ## download v8 monolithic library for linking
-#ifeq (,$(wildcard /etc/alpine-release))
-#	curl -L -o v8lib-$(RELEASE).tar.gz https://raw.githubusercontent.com/stealify/libv8/$(RELEASE)/v8.tar.gz
-#else
-#	curl -L -o v8lib-$(RELEASE).tar.gz https://raw.githubusercontent.com/stealify/libv8/$(RELEASE)/v8-alpine.tar.gz
-#endif
-#	tar -zxvf v8lib-$(RELEASE).tar.gz
-#	rm -f v8lib-$(RELEASE).tar.gz
+deps/v8/libv8_monolith.a: ## download v8 monolithic library for linking
+ifeq (,$(wildcard /etc/alpine-release))
+	curl -L -o v8lib-0.0.22.tar.gz https://raw.githubusercontent.com/stealify/libv8/0.0.22/v8.tar.gz
+else
+	curl -L -o v8lib-0.0.22.tar.gz https://raw.githubusercontent.com/stealify/libv8/0.0.22/v8-alpine.tar.gz
+endif
+	tar -zxvf v8lib-0.0.22.tar.gz
+	rm -f v8lib-0.0.22.tar.gz
 
-#v8src: ## download the full v8 source for this release
-#	curl -L -o v8src-$(RELEASE).tar.gz https://raw.githubusercontent.com/stealify/v8src/$(RELEASE)/v8src.tar.gz
-#	tar -zxvf v8src-$(RELEASE).tar.gz
-#	rm -f v8src-$(RELEASE).tar.gz
+v8src: ## download the full v8 source for this release
+	curl -L -o v8src-0.0.22.tar.gz https://raw.githubusercontent.com/stealify/v8src/0.0.22/v8src.tar.gz
+	tar -zxvf v8src-0.0.22.tar.gz
+	rm -f v8src-0.0.22.tar.gz
 
 module: ## build a shared library for a module 
 	CFLAGS="$(FLAGS)" LFLAGS="${LFLAG}" STEALIFY_HOME="$(STEALIFY_HOME)" make -C modules/${MODULE}/ library

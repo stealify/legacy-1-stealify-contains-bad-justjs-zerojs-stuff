@@ -1,0 +1,21 @@
+os: osx
+language: node_js
+node_js:
+  - "10"
+notifications:
+    email: false
+cache:
+  timeout: 600000
+  directories:
+    - deps
+
+install:
+  - brew outdated icu4c || brew upgrade icu4c
+  - brew link icu4c --force
+  - npx install-peerdeps --dev eslint-config-airbnb
+  - npm i babel-eslint
+
+script:
+  - ./configure --expose-binding
+  - make test
+
