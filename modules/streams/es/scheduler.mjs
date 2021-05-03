@@ -1,6 +1,31 @@
 //export * from '@most/scheduler/dist/index.es.js' esnext tsconfig
 import { findIndex, removeAll, curry2, curry3 } from './prelude.mjs';
 
+const newScheduledTaskImpl = (time, localOffset, period, task, scheduler) => {
+    const scheduledTaskImpl = {
+        time,
+        localOffset,
+        period,
+        task,
+        scheduler,
+        active: true,
+        run() {
+            const { task, time, localOffset } = scheduledTaskImpl;
+            return task.run(time - localOffset);
+        },
+        error(e) {
+            return scheduledTaskImpl.task.error(scheduledTaskImpl.time - scheduledTaskImpl.localOffset, e);
+        },
+        dispose() {
+            scheduledTaskImpl.active = false;
+            scheduledTaskImpl.scheduler.cancel(scheduledTaskImpl);
+            return scheduledTaskImpl.task.dispose();
+        }
+    }
+    return scheduledTaskImpl;
+
+}
+
 class ScheduledTaskImpl {
     constructor(time, localOffset, period, task, scheduler) {
         this.time = time;
@@ -45,9 +70,8 @@ class RelativeScheduler {
     }
 }
 
-/** @license MIT License (c) copyright 2010-2017 original author or authors */
-const defer = (task) => Promise.resolve(task).then(runTask);
-function runTask(task) {
+const defer = task => Promise.resolve(task).then(runTask);
+const runTask = task => {
     try {
         return task.run();
     }
@@ -295,6 +319,27 @@ class Asap {
         this.active = false;
     }
 }
+/**
+ * an asapScheduled Task
+ * @param f 
+ * @returns 
+ */
+const newAsap = f => {
+    const asapScheduledTask = {
+        f,
+        active: true,
+        run() {
+            const { active, f } = asapScheduledTask;
+            if (active) {
+                return f();
+            }
+        },
+        error(e) { throw e; },
+        cancel() { asapScheduled.active = false; }
+    }
+    return asapScheduled;
+}
+
 function runAsap(f) {
     const task = new Asap(f);
     defer(task);

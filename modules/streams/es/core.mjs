@@ -1,3 +1,4 @@
+// @ts-check
 //export * from '@most/core/dist/index.es.js' changed tsconfig to esnext
 import { curry2, compose, apply, id, reduce, map as map$2, append, findIndex, remove, curry3 } from './prelude.mjs';
 import { asap, delay as delay$2, periodic as periodic$1, schedulerRelativeTo, currentTime, cancelTask } from './scheduler.mjs';

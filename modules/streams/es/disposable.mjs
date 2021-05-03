@@ -3,11 +3,11 @@ import { curry2, reduce, concat, append, curry3 } from './prelude.mjs';
 
 const dispose = (disposable) => disposable.dispose();
 
-const disposeNone = () => NONE;
-const NONE = new (class DisposeNone {
-    dispose() { }
-})();
-const isDisposeNone = (d) => d === NONE;
+const disposeNone = () => ({
+    dispose() {/**NoOp*/},
+    isDisposeNone: true;
+});
+const isDisposeNone = d => d?.isDisposeNone;
 
 /**
  * Wrap an existing disposable (which may not already have been once()d)
