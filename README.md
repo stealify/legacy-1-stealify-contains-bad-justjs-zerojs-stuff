@@ -1,12 +1,10 @@
 ## Stealify lower the barrier of using v8::Isolates
 Cloudflare and other big companys are using them already but there exists no opensource Equivalent at present so stealify fills the gap. And Changes its mission from.
 
-Software Encapsulation to fast isolates that can operate with any software on a per Request base.
+Software Encapsulation to fast isolates SDK + 
 
-
-
-
-# deprecated in favor of v8 isolates 
+# Stealify should get a Collection of Tooling Best Practices to Create and Reuse Software 
+It Includes a V8::Isolates SDK to create ECMAScript written System Tooling as single file binary. For Example our Installer for the SDK is build with the SDK + ECMAScript. 
 
 # Most Current Stack
 - https://github.com/stealify/rust-tooling
