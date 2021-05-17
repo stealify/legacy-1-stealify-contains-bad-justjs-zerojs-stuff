@@ -13,6 +13,7 @@ We do not depend on the extra repos like just JS
 git clone git@github.com:just-js/just.git ./stealify
 cd stealify
 git clone git@github.com:just-js/libs.git
+## we should check at this step what cp -rf would do 
 cp -r libs/* lib
 rm -rf libs
 git clone git@github.com:just-js/modules.git
