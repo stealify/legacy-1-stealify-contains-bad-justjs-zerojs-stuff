@@ -1,7 +1,16 @@
-## Stealify lower the barrier of using v8::Isolates
-Cloudflare and other big companys are using them already but there exists no opensource Equivalent at present so stealify fills the gap. And Changes its mission from.
+## Stealify Polyglot ECMAScript Tooling.
+Run Convert Integrate ECMAScript 
 
-Software Encapsulation to fast isolates SDK + 
+- language-integration-tooling
+  - stealify-ecmascript-php (run php as js);
+  - stealify-ecmascript-python (run python js);
+  - stealify-ecmascript-go (run go js);
+  - stealify-ecmascript-java (run java as js);
+  - stealify-ecmascript-graalvm-truffle-adapter (run stealify-ecmascript-ast's inside graalvm);
+
+## Stealify lower the barrier of using v8::Isolates
+Cloudflare and other big companys are using them already but there exists no opensource Equivalent at present so stealify fills the gap. 
+with the offered Software Encapsulation Tooling including fast isolates SDK.
 
 # Stealify should get a Collection of Tooling Best Practices to Create and Reuse Software 
 It Includes a V8::Isolates SDK to create ECMAScript written System Tooling as single file binary. For Example our Installer for the SDK is build with the SDK + ECMAScript. 
@@ -13,7 +22,6 @@ It Includes a V8::Isolates SDK to create ECMAScript written System Tooling as si
 - https://github.com/stealify/rust-interop
 - https://github.com/stealify/graalvm-nodejs-interop
 - https://github.com/stealify/graalvm-nodejs-context
-
 
 ## About NodeJS
 NodeJS aka node is written in C and has Methods to Call C, .node(C using Node ABI), .wasm
@@ -32,10 +40,6 @@ Possible Solutions
 - shared object build .so
 - neonbindings => .node module
 - uvm......
-
-
-
-
 
 # Stealify Incubator for @direktspeed/vmpack & vmdeploy & @open-pwa
 Stealify is a Framework to adopt Software it is a Rockstar Unicorn Project all stable results will be supplyed and rebranded to @direktspeed/vmpack @direktspeed/vmdeploy and @open-pwa/open-pwa as also the Commercial ***Stealify Cloud - the First Cloud agnostic Cloud aka deployless serverless platform***
