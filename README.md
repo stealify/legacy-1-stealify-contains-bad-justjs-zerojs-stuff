@@ -11,6 +11,7 @@ Stealify Powers the @open-pwa/open-pwa project the open-pwa installer is also bu
 - why do i need to learn Java? Because it is used by Android and that means you can not circumvent to get Familar with it. Sure you can delay that and even create Software without knowing Java at all but you will reach Edge Cases where Java can save you a lot of time and headache. You only need it to Implement Bindings to other languages for your ECMAScript code. 
 - Learn about Cross Platform development "the good parts"
 - How to use JavaScript EcmaScript with Syntax and Code hint support aka TypeScript & Language Server Protocol Internals and Secrets.
+- In deepth Bindings and low level Informartion about Interop Magic as also Abstraction Patterns for Code Reuse.
 
 ## language-integration-tooling
   - stealify-ecmascript-php (run php as js);
