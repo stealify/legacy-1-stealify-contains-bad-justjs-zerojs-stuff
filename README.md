@@ -1,7 +1,18 @@
 ## Stealify Polyglot ECMAScript Tooling.
-Run Convert Integrate ECMAScript 
+Run Convert Integrate ECMAScript Code with Binary Polyglot Modules to Create Desktop and Mobile Apps for Any OS in Less Time. 
 
-- language-integration-tooling
+Stealify Offers the needed tools to Create Cross Platform Applications and Server Services.
+
+The Main Repo stealify/stealify holds example Stealify App Wrappers for diffrent Operating Systems they got created with the @stealify/sdk and the example app is the stealify manager.
+
+Stealify Powers the @open-pwa/open-pwa project the open-pwa installer is also build with the @stealify/sdk
+
+## Stealify Academy 
+- why do i need to learn Java? Because it is used by Android and that means you can not circumvent to get Familar with it. Sure you can delay that and even create Software without knowing Java at all but you will reach Edge Cases where Java can save you a lot of time and headache. You only need it to Implement Bindings to other languages for your ECMAScript code. 
+- Learn about Cross Platform development "the good parts"
+- How to use JavaScript EcmaScript with Syntax and Code hint support aka TypeScript & Language Server Protocol Internals and Secrets.
+
+## language-integration-tooling
   - stealify-ecmascript-php (run php as js);
   - stealify-ecmascript-python (run python js);
   - stealify-ecmascript-go (run go js);
@@ -10,10 +21,10 @@ Run Convert Integrate ECMAScript
 
 ## Stealify lower the barrier of using v8::Isolates
 Cloudflare and other big companys are using them already but there exists no opensource Equivalent at present so stealify fills the gap. 
-with the offered Software Encapsulation Tooling including fast isolates SDK.
+with the offered Software Encapsulation Tooling including fast isolates SDK based on the amazing just-js Project. It Includes a V8::Isolates SDK to create ECMAScript written System Tooling for linux as single file binary.
 
-# Stealify should get a Collection of Tooling Best Practices to Create and Reuse Software 
-It Includes a V8::Isolates SDK to create ECMAScript written System Tooling as single file binary. For Example our Installer for the SDK is build with the SDK + ECMAScript. 
+# Stealify should get a Collection of Tooling Best Practices to Create and Compose Software with ECMAScript glue Code
+For Example our Installer for the SDK is build with the @stealify/sdk
 
 # Most Current Stack
 - https://github.com/stealify/rust-tooling
@@ -140,7 +151,7 @@ Java Rust and Go are good source starting languages to create wasm.
   - parcel also covers rust well.
 
 ### GraalVM Runtime 
-GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++.
+GraalVM is a universal virtual machine for running applications written in JavaScript, Python, Ruby, R, JVM-based languages like Java, Scala, Clojure, Kotlin, and LLVM-based languages such as C and C++. It also offers a Substrate VM Layer that allows compiling AOT to binary executeable.
 
 The Graal Framework provides tools for creating language-agnostic tools like debuggers, profilers, or other instrumentations. In general, it provides a standardized way to express program code enabling cross-language research and the development of tools that are developed once and then can be applied to any language. As also aims to have some of the fastest Runtime Implamentations for many languages like Javascript driven Webservers.
 
