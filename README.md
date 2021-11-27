@@ -1,5 +1,5 @@
 ## Stealify Lang 
-Stealify will get its own coding language based on graaljs it will be a SuperSet of TypeScript/ECMAScript. with Opinionated Behavior and features.
+Stealify will get its own coding language based on graaljs & graalvm language tooling a SuperSet of TypeScript/ECMAScript. with Opinionated Behavior and features.
 It can transpil down to Polyglot ECMAScript.
 
 # Tooling
