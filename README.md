@@ -1,4 +1,8 @@
-## Stealify Polyglot ECMAScript Tooling.
+## Stealify Lang 
+Stealify will get its own coding language based on graaljs it will be a SuperSet of TypeScript/ECMAScript. with Opinionated Behavior and features.
+It can transpil down to Polyglot ECMAScript.
+
+# Tooling
 Run Convert Integrate ECMAScript Code with Binary Polyglot Modules to Create Desktop and Mobile Apps for Any OS in Less Time. 
 
 Stealify Offers the needed tools to Create Cross Platform Applications and Server Services.
