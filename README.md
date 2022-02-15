@@ -1,6 +1,13 @@
 ## Stealify Lang 
 Stealify will get its own coding language based on graaljs & graalvm language tooling a SuperSet of TypeScript/ECMAScript. with Opinionated Behavior and features.
-It can transpil down to Polyglot ECMAScript.
+It can transpil down to Polyglot ECMAScript2023+ that means that the resulitng Artifacts will get splitted into ECMAScript Code and binary execute able libs that are call able by the targeted Execution Environment.
+
+It also offers tooling to package and bundle the build artifacts with diffrent distribut able execution environments like. VirtualMachines, Containers to directly deploy run and test your app on the target machine no matter if it is a Cloud or your Local PC.
+
+It contains advanced Analyzers and Build Optimization API's to develop Autonomous Self Tuning Software.
+
+While Stealify Lang offers the Whole Feature Set most of the tooling is designed to even work standalone and can be composed based on project needs
+that allows you to incremental migrate your Projects to Stealify.
 
 # Tooling
 Run Convert Integrate ECMAScript Code with Binary Polyglot Modules to Create Desktop and Mobile Apps for Any OS in Less Time. 
@@ -9,10 +16,13 @@ Stealify Offers the needed tools to Create Cross Platform Applications and Serve
 
 The Main Repo stealify/stealify holds example Stealify App Wrappers for diffrent Operating Systems they got created with the @stealify/sdk and the example app is the stealify manager.
 
-Stealify Powers the @open-pwa/open-pwa project the open-pwa installer is also build with the @stealify/sdk
+Stealify did Power the @open-pwa/open-pwa project the open-pwa installer is also build with the @stealify/sdk
+now it gets mainly used to create tooling for the Web 4.0 https://github.com/internet-of-presence/IoP
 
 ## Stealify Academy 
-- why do i need to learn Java? Because it is used by Android and that means you can not circumvent to get Familar with it. Sure you can delay that and even create Software without knowing Java at all but you will reach Edge Cases where Java can save you a lot of time and headache. You only need it to Implement Bindings to other languages for your ECMAScript code. 
+- Why do i need rust? For buissnes critical Processing this is the ideal lang as it gives you enough constrains and build hints
+  - Later versions of Stealify Lang will use more and more rust code as also more and more wasm code.
+- why do i need to learn Java? Because it is used by Android and that means you can not circumvent to get Familar with it. Sure you can delay that and even create Software without knowing Java at all but you will reach Edge Cases where Java can save you a lot of time and headache. You only need it to Implement Bindings to other languages for your ECMAScript code it is also most time Relativ Familar for a ECMAScript Typescript or Stealify Developer.
 - Learn about Cross Platform development "the good parts"
 - How to use JavaScript EcmaScript with Syntax and Code hint support aka TypeScript & Language Server Protocol Internals and Secrets.
 - In deepth Bindings and low level Informartion about Interop Magic as also Abstraction Patterns for Code Reuse.
