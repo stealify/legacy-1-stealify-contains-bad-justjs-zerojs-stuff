@@ -1,4 +1,11 @@
 ## Stealify Lang 
+The first plug and play Meta DSL - Stealify Lang is designed to be extendable via Plugins so it can adopt any Language and Paradigm while it self is highly ECMAScript Inspired and Compatible (History) ECMAScript got designed as Polyglot Scripting Language so it is ideal Glue code for everything. the Java langs Groovy and Kotlin are highly Compatible to ECMAScript and TypeScript when Stealify Evolves it is a Drop in Replacement for GraalVM which is Highly Compatible with it so we will support building near everything that runs with other stealifyVm Implementations also for and with graalvm 
+
+it should allow us tu build own HotSpot + Compiler Feedback Interface + truffle like Stacks out of existing Open Source Software. Stealify is Like Open Truffle Implemented in ECMAScript but with a lot of Compiler tooling that is supplyed by Oracle when your using the GraalVM Stack. 
+
+The Final Goal is a Better Language as Java and Javascript that is polyglot and deployment aware so that tooling has a unified interface it can depend on and evolve faster as Tooling is the driver for inovation as you can see with Wordpress and Every Cloud Provider even GraalVM is at present only usefull with Quarkus and waists a lot of its potential.
+
+
 Stealify will get its own coding language based on graaljs & graalvm language tooling a SuperSet of TypeScript/ECMAScript. with Opinionated Behavior and features.
 It can transpil down to Polyglot ECMAScript2023+ that means that the resulitng Artifacts will get splitted into ECMAScript Code and binary execute able libs that are call able by the targeted Execution Environment.
 
