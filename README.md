@@ -16,6 +16,12 @@ It contains advanced Analyzers and Build Optimization API's to develop Autonomou
 While Stealify Lang offers the Whole Feature Set most of the tooling is designed to even work standalone and can be composed based on project needs
 that allows you to incremental migrate your Projects to Stealify.
 
+## Release Plans
+- finish @stealify/cli roadmap blocks https://github.com/stealify/cli
+- release the first linux version of stealify cli that works with nodejs (as that goes fast with pkg)
+- extend the tooling to package carlo/pupeteer Apps (installer) (to make stealify usefull and get people using it)
+
+
 # Tooling
 Run Convert Integrate ECMAScript Code with Binary Polyglot Modules to Create Desktop and Mobile Apps for Any OS in Less Time. 
 
